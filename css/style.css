@@ -68,14 +68,61 @@ body {
     font-size: 20px;
 }
 
+.main-destaque {
+    background: url(../assets/img/professorjuliano-e-aluno.jpg) no-repeat center center;
+    background-size: cover;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
 
+.texto-main-destaque {
+    padding: 0 20px;
+    max-width: 500px;
+}
+
+.main-title {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1;
+    text-shadow: 2px 1px 2px #333;
+    margin-bottom: 25px;
+}
+
+.btn-main {
+    color: var(--branco-puro);
+    background-color: var(--laranja-alerta);
+    border-radius: 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 15px;
+}
 
 /* Media query */
 @media(max-width: 900px){
     .header {
         margin-top: 20px;
         flex-direction: column;
-        height: 15vh;
+        height: 25vh;
         padding: 10px 0 10px 0;
+    }
+
+    .main-destaque {
+        padding: 0 1.5rem;
+        height: 60vh;
+    }
+
+    .main-title {
+        font-size: 24px;
+    }
+
+    .texto-main-destaque {
+        max-width: 100%;
     }
 }
