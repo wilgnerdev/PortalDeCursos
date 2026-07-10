@@ -104,6 +104,47 @@ body {
     padding: 10px 15px;
 }
 
+/* Sobre */
+
+.sobre {
+    padding: 6rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: var(--cinza-claro);
+}
+
+.sobre-titulo {
+    color: var(--azul-pao);
+    font-size: 38px;
+}
+
+.texto-sobre {
+    font-family: var(--fonte-body);
+    max-width: 500px;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.card-destaque {
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid transparent;
+    background-color: #004a99;
+    border-radius: 8px;
+    padding: 25px;
+}
+
+.card-destaque span{
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+}
+
+
 /* Media query */
 @media(max-width: 900px){
     .header {
