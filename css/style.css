@@ -14,8 +14,8 @@
   --cor-preto: #333333;
 
   /* Fontes */
-  --fonte-principal: "Outfit", sans-serif;
-  --fonte-body: "Inter", sans-serif;
+  --fonte-destaque: "Outfit", sans-serif;
+  --fonte-texto: "Inter", sans-serif;
 
   /* Cores de Detalhe e Tradição (130 Anos) */
   --dourado-frio: rgb(197, 168, 115);    /* Cor dos ícones e selo comemorativo  */
@@ -36,7 +36,12 @@
 }
 
 body {
-    font-family: var(--fonte-principal);
+    font-family: var(--fonte-destaque);
+}
+
+p {
+    color: var(--texto-principal);
+    font-family: var(--fonte-texto);
 }
 
 .header {
@@ -44,14 +49,12 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-family: Outfit;
     position: sticky;
 }
 
 .logo img {
     height: 50px;
     width: auto;
-
 }
 
 .nav-header ul {
@@ -75,7 +78,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
 }
 
 .texto-main-destaque {
@@ -117,15 +119,19 @@ body {
 }
 
 .sobre-titulo {
-    color: var(--azul-pao);
+    color: var(--azul-claro);
     font-size: 38px;
 }
 
 .texto-sobre {
-    font-family: var(--fonte-body);
     max-width: 500px;
     font-size: 18px;
     margin-top: 10px;
+}
+
+.box-card-destaque {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .card-destaque {
@@ -155,7 +161,7 @@ body {
 }
 
 .curso-titulo {
-    color: var(--azul-pao);
+    color: var(--azul-claro);
     font-size: 38px;
     text-align: center;
     margin-bottom: 30px;
@@ -164,15 +170,18 @@ body {
 .curso-paragrafo {
     font-size: 18px;
     text-align: center;
+    font-weight: 600;
+    margin-bottom: 40px;
 }
 
 .cursos-grid {
     margin-top: 40px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
     flex-wrap: wrap;
     gap: 40px;
     max-width: 1400px;
+    margin: 0 auto;
 }
 
 .card-curso {
@@ -222,10 +231,9 @@ body {
     align-items: center;
 }
 
-.card-conteudo p{
+.card-conteudo p {
     margin-bottom: 20px;
     min-height: 72px;
-    
 }
 
 .card-conteudo a {
@@ -238,13 +246,45 @@ body {
     padding: 12px;
 }
 
+.faq {
+    background-color: var(--cinza-claro);
+    padding: 0 4rem;
+}
+
+.faq__titulo {
+    color: var(--azul-claro);
+    padding-top: 6rem;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.faq details {
+    padding-bottom: 30px;
+    color: var(--texto-principal);
+}
+
+.faq summary {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.faq p {
+    font-size: 17px;
+    line-height: 1.5rem;
+}
+
 /* Media query */
+
 @media(max-width: 900px){
     .header {
-        margin-top: 20px;
+        margin-top: 6px;
         flex-direction: column;
         height: 25vh;
         padding: 10px 0 10px 0;
+    }
+
+    .nav-header a {
+        font-size: 16px;
     }
 
     .main-destaque {
@@ -258,6 +298,23 @@ body {
 
     .texto-main-destaque {
         max-width: 100%;
+    }
+}
+
+/* media query seção sobre */
+
+@media(max-width: 709px) {
+    .box-card-destaque {
+        justify-content: center;
+        gap: 30px;
+        margin-top: 15px;
+    }
+}
+
+/* Celulares */
+@media(max-width: 408px){
+     .nav-header a {
+        font-size: 13px;
     }
 }
 
