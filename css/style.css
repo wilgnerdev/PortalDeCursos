@@ -309,6 +309,15 @@ p {
         gap: 30px;
         margin-top: 15px;
     }
+
+    .curso-section {
+        padding: 3rem 1.25rem; 
+    }
+
+    .cursos-grid {
+        grid-template-columns: 1fr; 
+        gap: 24px;
+    }
 }
 
 /* Celulares */
