@@ -12,6 +12,8 @@
   --branco-puro: rgb(255, 255, 255);     /* Para textos sobre fundos escuros */
   --cinza-claro: #f5f5f5; /* Backgorund em fundos de seção */
   --cor-preto: #333333;
+  --cor-cinza-texto: #666666;
+  --cor-cinza-medio: #e0e0e0;
 
   /* Fontes */
   --fonte-destaque: "Outfit", sans-serif;
@@ -50,6 +52,7 @@ p {
     justify-content: space-around;
     align-items: center;
     position: sticky;
+    background-color: var(--fundo-off-white);
 }
 
 .logo img {
@@ -170,7 +173,6 @@ p {
 .curso-paragrafo {
     font-size: 18px;
     text-align: center;
-    font-weight: 600;
     margin-bottom: 40px;
 }
 
@@ -279,6 +281,105 @@ p {
     font-size: 17px;
     line-height: 1.5rem;
     padding: 20px;
+}
+
+/* Formulário */
+.formulario {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+    background-color: var(--cinza-claro);
+    padding: 4rem 2rem;
+}
+
+.titulo__form {
+    color: var(--azul-claro);
+    font-size: 38px;
+    text-align: center;
+}
+
+.form__paragrafo {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.fieldset__formulario {
+    padding: 20px;
+    border: 2px solid var(--cor-cinza-medio);
+    border-radius: 8px;
+    margin: 30px 0;
+}
+
+.fieldset__formulario legend {
+    font-size: 20px;
+    padding: 0 12px;
+    color: var(--azul-claro);
+    font-weight: bold;
+    font-family: var(--fonte-texto);
+}
+
+.formulario-body {
+    background-color: var(--branco-puro);
+    border-radius: 8px;
+    padding: 32px;
+    width: 100%;
+    max-width: 1200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.formulario-body label {
+    display: block;
+    font-family: var(--fonte-texto);
+    color: var(--texto-principal);
+    margin: 14px 0;
+}
+
+.formulario-body input {
+    width: 100%;
+    font-family: var(--fonte-texto);
+    font-size: 15px;
+    padding: 10px;
+    border: 2px solid var(--cor-cinza-medio);
+    border-radius: 8px;
+}
+
+.formulario-body input:focus {
+    outline: none;
+    border-color: var(--azul-claro);
+}
+
+.linha {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.campo-largo {
+    flex: 1;
+}
+
+.campo-curto {
+    width: 90px;
+}
+
+#select-cursos, #select-periodo {
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.formulario .btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--laranja-alerta);
+    border: none;
+    cursor: pointer;
+    color: var(--branco-puro);
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 /* Media query */
