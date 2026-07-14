@@ -37,6 +37,10 @@
   --amarelo-hub: rgb(255, 212, 0);       /* Destaque para cursos de gastronomia */
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: var(--fonte-destaque);
 }
@@ -305,7 +309,7 @@ p {
 
 .fieldset__formulario {
     padding: 20px;
-    border: 2px solid var(--cor-cinza-medio);
+    border: 2px solid var(--azul-aco-divisor);
     border-radius: 8px;
     margin: 30px 0;
 }
@@ -318,7 +322,7 @@ p {
     font-family: var(--fonte-texto);
 }
 
-.formulario-body {
+.corpo-formulario {
     background-color: var(--branco-puro);
     border-radius: 8px;
     padding: 32px;
@@ -327,23 +331,24 @@ p {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.formulario-body label {
+.corpo-formulario label {
     display: block;
     font-family: var(--fonte-texto);
     color: var(--texto-principal);
     margin: 14px 0;
 }
 
-.formulario-body input {
+.corpo-formulario input {
     width: 100%;
     font-family: var(--fonte-texto);
     font-size: 15px;
     padding: 10px;
     border: 2px solid var(--cor-cinza-medio);
     border-radius: 8px;
+    transition: 0.5s;
 }
 
-.formulario-body input:focus {
+.corpo-formulario input:focus {
     outline: none;
     border-color: var(--azul-claro);
 }
@@ -359,14 +364,23 @@ p {
 }
 
 .campo-curto {
-    width: 90px;
+    width: 200px;
 }
 
 #select-cursos, #select-periodo {
     padding: 15px;
     border-radius: 8px;
     margin: 10px 0;
+    width: 100%;
+    border: 2px solid var(--cor-cinza-medio);
+    color: var(--texto-principal);
+    transition: 0.5s;
 }
+
+#select-cursos:focus, #select-periodo:focus {
+    outline: none;
+    border-color: var(--azul-claro);
+} 
 
 .formulario .btn {
     width: 100%;
@@ -410,7 +424,7 @@ p {
     }
 }
 
-/* media query seção sobre */
+/* media query seção sobre e cursos*/
 
 @media(max-width: 709px) {
     .box-card-destaque {
@@ -426,6 +440,28 @@ p {
     .cursos-grid {
         grid-template-columns: 1fr; 
         gap: 24px;
+    }
+
+    .texto-sobre {
+        margin: 35px 0;
+    }
+}
+
+@media(max-width: 586px) {
+    .linha {
+        display: block;
+    }
+
+    .campo-curto {
+    width: 90px;
+}
+
+    .periodo {
+        width: 100%;
+    }
+    
+    .titulo__form {
+        font-size: 28px;
     }
 }
 
