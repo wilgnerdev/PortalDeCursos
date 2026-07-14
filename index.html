@@ -8,9 +8,9 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 
     <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,20 +19,21 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- JS -->
+    <script type="module" src="js/pages/cadastro.js"></script>
 </head>
 
 <body>
     <header class="header">
-        <div class="logo"><a href="#"><img src="assets/img/logo-pao-dos-pobres.png" alt="Logo Pão dos Pobres"></a></div>
+        <div class="logo"><a href="#"><img src="../assets/img/logo-pao-dos-pobres.png" alt="Logo Pão dos Pobres"></a></div>
         <nav class="nav-header">
             <ul>
                 <li><a href="#">Início</a></li>
-                <li><a href="#">Cursos</a></li>
-                <li><a href="#">Faq</a></li>
-                <li><a href="#">Inscreva-se</a></li>
+                <li><a href="#cursos">Cursos</a></li>
+                <li><a href="#faq">Faq</a></li>
+                <li><a href="#inscreva-se">Inscreva-se</a></li>
             </ul>
         </nav>
     </header>
@@ -64,13 +65,13 @@
             </div>
         </section>
         <section class="curso-section">
-            <h2 class="curso-titulo">Cursos disponíveis</h2>
+            <h2 class="curso-titulo" id="cursos">Cursos disponíveis</h2>
             <p class="curso-paragrafo">Escolha uma área e conheça os detalhes de cada curso.</p>
 
             <div class="cursos-grid">
                 <div class="card-curso">
                     <div class="top-card">
-                        <img src="assets/img/foto-adm.jpg" alt="Foto do curso de Assistente Admnistrativo">
+                        <img src="../assets/img/foto-adm.jpg" alt="Foto do curso de Assistente Admnistrativo">
                         <span class="card-badge">Aprendizagem</span>
                     </div>
                     <div class="card-conteudo">
@@ -82,7 +83,7 @@
 
                 <div class="card-curso">
                     <div class="top-card">
-                        <img src="assets/img/cabeleireiro-aluno.jpg" alt="Foto do curso de Assistente de Cabeleireiro">
+                        <img src="../assets/img/cabeleireiro-aluno.jpg" alt="Foto do curso de Assistente de Cabeleireiro">
                         <span class="card-badge">Aprendizagem</span>
                     </div>
                     <div class="card-conteudo">
@@ -94,7 +95,7 @@
 
                 <div class="card-curso">
                     <div class="top-card">
-                        <img src="assets/img/prog.jpg" alt="Foto do curso de Programação Web">
+                        <img src="../assets/img/prog.jpg" alt="Foto do curso de Programação Web">
                         <span class="card-badge">Aprendizagem</span>
                     </div>
                     <div class="card-conteudo">
@@ -106,7 +107,7 @@
 
                 <div class="card-curso">
                     <div class="top-card">
-                        <img src="assets/img/costura_aluno.jpg"
+                        <img src="../assets/img/costura_aluno.jpg"
                             alt="Foto do curso de Corte, Costura e Modelagem Sustentável">
                         <span class="card-badge">Aprendizagem</span>
                     </div>
@@ -119,7 +120,7 @@
 
                 <div class="card-curso">
                     <div class="top-card">
-                        <img src="assets/img/desporto.jpg" alt="Foto do curso de Desporto">
+                        <img src="../assets/img/desporto.jpg" alt="Foto do curso de Desporto">
                         <span class="card-badge">Aprendizagem</span>
                     </div>
                     <div class="card-conteudo">
@@ -131,7 +132,7 @@
 
                 <div class="card-curso">
                     <div class="top-card">
-                        <img src="assets/img/elevators.jpg" alt="Foto do curso de Eletromecânica de Elevadores">
+                        <img src="../assets/img/elevators.jpg" alt="Foto do curso de Eletromecânica de Elevadores">
                         <span class="card-badge">Aprendizagem</span>
                     </div>
                     <div class="card-conteudo">
@@ -143,7 +144,7 @@
 
                 <div class="card-curso">
                     <div class="top-card">
-                        <img src="assets/img/gastronomia_pao.jpeg" alt="Foto do curso de Gastronomia">
+                        <img src="../assets/img/gastronomia_pao.jpeg" alt="Foto do curso de Gastronomia">
                         <span class="card-badge">Aprendizagem</span>
                     </div>
                     <div class="card-conteudo">
@@ -155,7 +156,7 @@
 
                 <div class="card-curso">
                     <div class="top-card">
-                        <img src="assets/img/aprendizagem-profissional-mecanica.jpg"
+                        <img src="../assets/img/aprendizagem-profissional-mecanica.jpg"
                             alt="Foto do curso de Mecânica Automotiva">
                         <span class="card-badge">Aprendizagem</span>
                     </div>
@@ -168,7 +169,7 @@
 
                 <div class="card-curso">
                     <div class="top-card">
-                        <img src="assets/img/projetista.jpg" alt="Foto do curso de Refrigeração e Climatização">
+                        <img src="../assets/img/projetista.jpg" alt="Foto do curso de Refrigeração e Climatização">
                         <span class="card-badge">Aprendizagem</span>
                     </div>
                     <div class="card-conteudo">
@@ -180,7 +181,7 @@
 
                 <div class="card-curso">
                     <div class="top-card">
-                        <img src="assets/img/refrigeracao.jpg" alt="Foto do curso de Refrigeração e Climatização">
+                        <img src="../assets/img/refrigeracao.jpg" alt="Foto do curso de Refrigeração e Climatização">
                         <span class="card-badge">Aprendizagem</span>
                     </div>
                     <div class="card-conteudo">
@@ -192,7 +193,7 @@
 
                 <div class="card-curso">
                     <div class="top-card">
-                        <img src="assets/img/aprendizagem-profissional-suporte-ti.jpg"
+                        <img src="../assets/img/aprendizagem-profissional-suporte-ti.jpg"
                             alt="Foto do curso de Suporte em T.I">
                         <span class="card-badge">Aprendizagem</span>
                     </div>
@@ -205,7 +206,7 @@
 
                 <div class="card-curso">
                     <div class="top-card">
-                        <img src="assets/img/vendas.jpg" alt="Foto do curso de Vendas e Atendimento ao Cliente">
+                        <img src="../assets/img/vendas.jpg" alt="Foto do curso de Vendas e Atendimento ao Cliente">
                         <span class="card-badge">Aprendizagem</span>
                     </div>
                     <div class="card-conteudo">
@@ -216,8 +217,8 @@
                 </div>
             </div>
         </section>
-        <section class="formulario">
-            <form class="formulario-body" id="form-cadastro">
+        <section class="formulario" id="inscreva-se">
+            <form id="form-cadastro" class="corpo-formulario">
             <h2 class="titulo__form">Faça sua inscrição</h2>
             <p class="form__paragrafo">Preencha os campos abaixo para se inscrever em nossos cursos</p>
                 <fieldset class="fieldset__formulario">
@@ -257,7 +258,7 @@
 
                 <div class="linha">
                     <div class="campo-largo">
-                        <label for="Cidade">Cidade</label>
+                        <label for="cidade">Cidade</label>
                         <input type="text" id="cidade">
                     </div>
 
@@ -272,31 +273,31 @@
                     <legend>Curso de Interesse</legend>
                     <div class="linha">
                         <div class="campo-largo">
-                        <label for="select-cursos">Selecione um curso</label>
-                        <select id="select-cursos">
-                        <option value="">Selecione um curso</option>
-                        <option value="adm">Assistente Admnistrativo</option>
-                        <option value="cabelo">Assistente de Cabeleireiro</option>
-                        <option value="programacao">Auxiliar de Desenvolvimento Web (Programação)</option>
-                        <option value="costura">Corte, Costura e Modelagem Sustentável</option>
-                        <option value="desporto">Desporto</option>
-                        <option value="elevadores">Eletromecânica de Elevadores</option>
-                        <option value="gastro">Gastronomia</option>
-                        <option value="mecanica">Mecânica Automotiva</option>
-                        <option value="projetista">Projetista de Móveis</option>
-                        <option value="refrigeracao">Refrigeração e Climatização</option>
-                        <option value="ti">Suporte em T.I</option>
-                        <option value="vendas">Vendas e Atendimento ao Cliente</option>
-                        </select>
+                            <label for="select-cursos">Selecione um curso</label>
+                            <select id="select-cursos">
+                            <option value="">Selecione um curso</option>
+                            <option value="adm">Assistente Admnistrativo</option>
+                            <option value="cabelo">Assistente de Cabeleireiro</option>
+                            <option value="programacao">Auxiliar de Desenvolvimento Web (Programação)</option>
+                            <option value="costura">Corte, Costura e Modelagem Sustentável</option>
+                            <option value="desporto">Desporto</option>
+                            <option value="elevadores">Eletromecânica de Elevadores</option>
+                            <option value="gastro">Gastronomia</option>
+                            <option value="mecanica">Mecânica Automotiva</option>
+                            <option value="projetista">Projetista de Móveis</option>
+                            <option value="refrigeracao">Refrigeração e Climatização</option>
+                            <option value="ti">Suporte em T.I</option>
+                            <option value="vendas">Vendas e Atendimento ao Cliente</option>
+                            </select>
                         </div>
 
-                        <div class="campo-curto">
-                        <label for="periodo">Período de Preferência</label>
-                        <select id="select-periodo">
-                            <option value="">Selecione</option>
-                            <option value="manha">Manhã</option>
-                            <option value="tarde">Tarde</option>
-                        </select>
+                        <div class="campo-curto periodo">
+                            <label for="periodo">Período de Preferência</label>
+                            <select id="select-periodo">
+                                <option value="">Selecione</option>
+                                <option value="manha">Manhã</option>
+                                <option value="tarde">Tarde</option>
+                            </select>
                         </div>
                     </div>
                 </fieldset>
@@ -305,7 +306,7 @@
                 <button type="submit" class="btn">Enviar inscrição</button>
         </form>
         </section>
-        <section class="faq">
+        <section class="faq" id="faq">
                 <h2 class="faq__titulo">Perguntas Frequentes (FAQ)</h2>
                 <details>
                     <summary>O curso é gratuito?</summary>
@@ -324,5 +325,4 @@
         </section>
     </main>
 </body>
-
 </html>
