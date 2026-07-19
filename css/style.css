@@ -504,9 +504,31 @@ p {
 }
 
 /* Celulares */
+/* @media(max-width: 466px) {
+     .main-title {
+        font-size: 18px;
+    }
+
+    .btn-main {
+        font-size: 12px;
+    }
+
+    .sobre-titulo {
+        font-size: 32px;
+    }
+} */
+
 @media(max-width: 408px){
      .nav-header a {
         font-size: 13px;
     }
-}
 
+   .modal-conteudo {
+    width: 280px;
+   }
+   
+   .paragrafo-modal-conteudo {
+    font-size: 14px;
+   }
+
+}
