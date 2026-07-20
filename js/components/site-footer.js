@@ -4,7 +4,7 @@ class SiteFooter extends HTMLElement {
             `<footer class="footer">
                 <div class="footer-conteudo">
                 <div class="footer-col">
-                    <img src="assets/img/logo-big.png" alt="Logo Fundação O Pão dos Pobres" class="footer-logo">
+                    <img src="assets/images/logo-big.png" alt="Logo Fundação O Pão dos Pobres" class="footer-logo">
                     <p>Há mais de 150 anos formando profissionais em Porto Alegre.</p>
                 </div>
 
