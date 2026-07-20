@@ -23,6 +23,7 @@
     
     <!-- JS -->
     <script type="module" src="js/pages/cadastro.js"></script>
+    <script type="module" src="js/pages/modalFormulario.js"></script>
 </head>
 
 <body>
@@ -41,7 +42,7 @@
         <section class="main-destaque">
             <div class="texto-main-destaque">
                 <h1 class="main-title">Aprendizagem Profissional e Cursos de Qualificação</h1>
-                <a class="btn-main" href="#">Inscreva-se gratuitamente</a>
+                <a class="btn-main" href="#inscreva-se">Inscreva-se gratuitamente</a>
             </div>
         </section>
         <section class="sobre">
@@ -218,7 +219,7 @@
             </div>
         </section>
         <section class="formulario" id="inscreva-se">
-            <form id="form-cadastro" class="corpo-formulario">
+            <form id="formCadastro" class="corpo-formulario">
             <h2 class="titulo__form">Faça sua inscrição</h2>
             <p class="form__paragrafo">Preencha os campos abaixo para se inscrever em nossos cursos</p>
                 <fieldset class="fieldset__formulario">
@@ -233,7 +234,7 @@
                 <input type="tel" id="telefone" placeholder="(51)99999-9999" required>
 
                 <label for="cpf">CPF</label>
-                <input type="number" id="cpf" placeholder="000.000.000-00" required>
+                <input type="text" id="cpf" placeholder="000.000.000-00" required>
                 </fieldset>
 
                 <fieldset class="fieldset__formulario">
@@ -305,6 +306,15 @@
                 <p id="aviso" class="aviso"></p>
                 <button type="submit" class="btn">Enviar inscrição</button>
         </form>
+
+        <div id="caixaAgradecimento" class="modal-fundo">
+            <div class="modal-conteudo">
+                <h2 class="titulo-modal-conteudo">Obrigado!</h2>
+                <p class="paragrafo-modal-conteudo">Seus dados foram recebidos com sucesso.</p>
+                <button id="fecharModal">Fechar</button>
+            </div>
+        </div>
+
         </section>
         <section class="faq" id="faq">
                 <h2 class="faq__titulo">Perguntas Frequentes (FAQ)</h2>
