@@ -642,15 +642,12 @@ p {
         font-size: 12px;
     }
 
-    .sobre-titulo {
+    .sobre-titulo, .curso-titulo {
         font-size: 32px;
     }
 }
 
 @media(max-width: 408px){
-     .nav-header a {
-        font-size: 13px;
-    }
 
    .modal-conteudo {
     width: 280px;
