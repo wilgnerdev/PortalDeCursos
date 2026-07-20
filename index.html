@@ -8,9 +8,9 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Ícones -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,17 +27,31 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="logo"><a href="#"><img src="assets/img/logo-pao-dos-pobres.png" alt="Logo Pão dos Pobres"></a></div>
-        <nav class="nav-header">
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#cursos">Cursos</a></li>
-                <li><a href="#faq">Faq</a></li>
-                <li><a href="#inscreva-se">Inscreva-se</a></li>
-            </ul>
-        </nav>
-    </header>
+    <header>
+            <div class="nav-social">
+                <nav>
+                    <a href="https://www.facebook.com/paodospobres" target="_blank" aria-label="Facebook"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/company/fundacao-pao-dos-pobres" target="_blank"
+                        aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/channel/UCRcI7jAkBA8TSzFRFHqW1tQ" target="_blank"
+                        aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/fundacaopaodospobres" target="_blank" aria-label="Instagram"><i
+                            class="fa-brands fa-instagram"></i></a>
+                </nav>
+            </div>
+
+            <nav class="navbar">
+                <a class="logo" href="/"><img src="assets/img/logo-pao-dos-pobres.png" alt="Logo Fundação O Pão dos Pobres"></a>
+                <ul class="nav-list">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#cursos">Cursos</a></li>
+                    <li><a href="#faq">Faq</a></li>
+                    <li><a href="#inscreva-se">Inscrever-se</a></li>
+                    <!-- <li><a href="https://www.paodospobres.org.br/" target="_blank">Site oficial</a></li> -->
+                </ul>
+            </nav>
+        </header>
     <main class="main">
         <section class="main-destaque">
             <div class="texto-main-destaque">
@@ -72,148 +86,145 @@
             <div class="cursos-grid">
                 <div class="card-curso">
                     <div class="top-card">
-                        <img src="assets/img/foto-adm.jpg" alt="Foto do curso de Assistente Admnistrativo">
+                        <img src="assets/img/foto-adm.jpg" loading="lazy" alt="Foto do curso de Assistente Admnistrativo">
                         <span class="card-badge">Aprendizagem</span>
                     </div>
                     <div class="card-conteudo">
-                        <h4>Assistente Admnistrativo</h4>
-                        <p>Gestão de documentos, atendimento e rotinas administrativas empresariais.</p>
-                        <a href="#">Ver Detalhes</a>
+                        <h3 class="titulo-card-conteudo">Assistente Admnistrativo</h3>
+                        <p class="paragrafo-card-conteudo">Gestão de documentos, atendimento e rotinas administrativas empresariais.</p>
+                        <a href="#" class="ver-detalhes">Ver Detalhes</a>
                     </div>
                 </div>
 
                 <div class="card-curso">
                     <div class="top-card">
-                        <img src="assets/img/cabeleireiro-aluno.jpg" alt="Foto do curso de Assistente de Cabeleireiro">
+                        <img src="assets/img/cabeleireiro-aluno.jpg" loading="lazy" alt="Foto do curso de Assistente de Cabeleireiro">
                         <span class="card-badge">Aprendizagem</span>
                     </div>
                     <div class="card-conteudo">
-                        <h4>Assistente de Cabeleireiro</h4>
-                        <p>Técnicas de corte, coloração, tratamentos capilares e atendimento em salões.</p>
-                        <a href="#">Ver Detalhes</a>
+                        <h3 class="titulo-card-conteudo">Assistente de Cabeleireiro</h3>
+                        <p class="paragrafo-card-conteudo">Técnicas de corte, coloração, tratamentos capilares e atendimento em salões.</p>
+                        <a href="#" class="ver-detalhes">Ver Detalhes</a>
                     </div>
                 </div>
 
                 <div class="card-curso">
                     <div class="top-card">
-                        <img src="assets/img/prog.jpg" alt="Foto do curso de Programação Web">
+                        <img src="assets/img/prog.jpg" loading="lazy" alt="Foto do curso de Programação Web">
                         <span class="card-badge">Aprendizagem</span>
                     </div>
                     <div class="card-conteudo">
-                        <h4>Auxiliar de Desenvolvimento Web (Programação)</h4>
-                        <p>Criação e arquitetura de softwares e sites modernos.</p>
-                        <a href="#">Ver Detalhes</a>
+                        <h3 class="titulo-card-conteudo">Auxiliar de Desenvolvimento Web (Programação)</h3>
+                        <p class="paragrafo-card-conteudo">Criação e arquitetura de softwares e sites modernos.</p>
+                        <a href="#" class="ver-detalhes">Ver Detalhes</a>
                     </div>
                 </div>
 
                 <div class="card-curso">
                     <div class="top-card">
-                        <img src="assets/img/costura_aluno.jpg"
-                            alt="Foto do curso de Corte, Costura e Modelagem Sustentável">
+                        <img src="assets/img/costura_aluno.jpg" loading="lazy" alt="Foto do curso de Corte, Costura e Modelagem Sustentável">
                         <span class="card-badge">Aprendizagem</span>
                     </div>
                     <div class="card-conteudo">
-                        <h4>Corte, Costura e Modelagem Sustentável</h4>
-                        <p>Confecção de roupas com foco em moda sustentável e técnicas de modelagem.</p>
-                        <a href="#">Ver Detalhes</a>
+                        <h3 class="titulo-card-conteudo">Corte, Costura e Modelagem Sustentável</h3>
+                        <p class="paragrafo-card-conteudo">Confecção de roupas com foco em moda sustentável e técnicas de modelagem.</p>
+                        <a href="#" class="ver-detalhes">Ver Detalhes</a>
                     </div>
                 </div>
 
                 <div class="card-curso">
                     <div class="top-card">
-                        <img src="assets/img/desporto.jpg" alt="Foto do curso de Desporto">
+                        <img src="assets/img/desporto.jpg" loading="lazy" alt="Foto do curso de Desporto">
                         <span class="card-badge">Aprendizagem</span>
                     </div>
                     <div class="card-conteudo">
-                        <h4>Desporto</h4>
-                        <p>Formação em educação física, esportes e atividades recreativas.</p>
-                        <a href="#">Ver Detalhes</a>
+                        <h3 class="titulo-card-conteudo">Desporto</h3>
+                        <p class="paragrafo-card-conteudo">Formação em educação física, esportes e atividades recreativas.</p>
+                        <a href="#" class="ver-detalhes">Ver Detalhes</a>
                     </div>
                 </div>
 
                 <div class="card-curso">
                     <div class="top-card">
-                        <img src="assets/img/elevators.jpg" alt="Foto do curso de Eletromecânica de Elevadores">
+                        <img src="assets/img/elevators.jpg" loading="lazy" alt="Foto do curso de Eletromecânica de Elevadores">
                         <span class="card-badge">Aprendizagem</span>
                     </div>
                     <div class="card-conteudo">
-                        <h4>Eletromecânica de Elevadores</h4>
-                        <p>Manutenção, operação e segurança de sistemas de elevadores.</p>
-                        <a href="#">Ver Detalhes</a>
+                        <h3 class="titulo-card-conteudo">Eletromecânica de Elevadores</h3>
+                        <p class="paragrafo-card-conteudo">Manutenção, operação e segurança de sistemas de elevadores.</p>
+                        <a href="#" class="ver-detalhes">Ver Detalhes</a>
                     </div>
                 </div>
 
                 <div class="card-curso">
                     <div class="top-card">
-                        <img src="assets/img/gastronomia_pao.jpeg" alt="Foto do curso de Gastronomia">
+                        <img src="assets/img/gastronomia_pao.jpeg" loading="lazy" alt="Foto do curso de Gastronomia">
                         <span class="card-badge">Aprendizagem</span>
                     </div>
                     <div class="card-conteudo">
-                        <h4>Gastronomia</h4>
-                        <p>Técnicas culinárias profissionais e preparação de alimentos.</p>
-                        <a href="#">Ver Detalhes</a>
+                        <h3 class="titulo-card-conteudo">Gastronomia</h3>
+                        <p class="paragrafo-card-conteudo">Técnicas culinárias profissionais e preparação de alimentos.</p>
+                        <a href="#" class="ver-detalhes">Ver Detalhes</a>
                     </div>
                 </div>
 
                 <div class="card-curso">
                     <div class="top-card">
-                        <img src="assets/img/aprendizagem-profissional-mecanica.jpg"
-                            alt="Foto do curso de Mecânica Automotiva">
+                        <img src="assets/img/aprendizagem-profissional-mecanica.jpg" loading="lazy" alt="Foto do curso de Mecânica Automotiva">
                         <span class="card-badge">Aprendizagem</span>
                     </div>
                     <div class="card-conteudo">
-                        <h4>Mecânica Automotiva</h4>
-                        <p>Manutenção, reparo e diagnóstico de veículos automotores.</p>
-                        <a href="#">Ver Detalhes</a>
+                        <h3 class="titulo-card-conteudo">Mecânica Automotiva</h3>
+                        <p class="paragrafo-card-conteudo">Manutenção, reparo e diagnóstico de veículos automotores.</p>
+                        <a href="#" class="ver-detalhes">Ver Detalhes</a>
                     </div>
                 </div>
 
                 <div class="card-curso">
                     <div class="top-card">
-                        <img src="assets/img/projetista.jpg" alt="Foto do curso de Refrigeração e Climatização">
+                        <img src="assets/img/projetista.jpg" loading="lazy" alt="Foto do curso de Refrigeração e Climatização">
                         <span class="card-badge">Aprendizagem</span>
                     </div>
                     <div class="card-conteudo">
-                        <h4>Projetista de Móveis</h4>
-                        <p>Planejamento e execução de projetos de móveis e marcenaria.</p>
-                        <a href="#">Ver Detalhes</a>
+                        <h3 class="titulo-card-conteudo">Projetista de Móveis</h3>
+                        <p class="paragrafo-card-conteudo">Planejamento e execução de projetos de móveis e marcenaria.</p>
+                        <a href="#" class="ver-detalhes">Ver Detalhes</a>
                     </div>
                 </div>
 
                 <div class="card-curso">
                     <div class="top-card">
-                        <img src="assets/img/refrigeracao.jpg" alt="Foto do curso de Refrigeração e Climatização">
+                        <img src="assets/img/refrigeracao.jpg" loading="lazy" alt="Foto do curso de Refrigeração e Climatização">
                         <span class="card-badge">Aprendizagem</span>
                     </div>
                     <div class="card-conteudo">
-                        <h4>Refrigeração e Climatização</h4>
-                        <p>Instalação e manutenção de sistemas de ar condicionado e refrigeração.</p>
-                        <a href="#">Ver Detalhes</a>
+                        <h3 class="titulo-card-conteudo">Refrigeração e Climatização</h3>
+                        <p class="paragrafo-card-conteudo">Instalação e manutenção de sistemas de ar condicionado e refrigeração.</p>
+                        <a href="#" class="ver-detalhes">Ver Detalhes</a>
                     </div>
                 </div>
 
                 <div class="card-curso">
                     <div class="top-card">
-                        <img src="assets/img/aprendizagem-profissional-suporte-ti.jpg"
-                            alt="Foto do curso de Suporte em T.I">
+                        <img src="assets/img/aprendizagem-profissional-suporte-ti.jpg" loading="lazy" alt="Foto do curso de Suporte em T.I">
                         <span class="card-badge">Aprendizagem</span>
                     </div>
                     <div class="card-conteudo">
-                        <h4>Suporte em T.I</h4>
-                        <p>Manutenção, reparo e diagnóstico de computadores e instalação de sistemas operacionais.</p>
-                        <a href="#">Ver Detalhes</a>
+                        <h3 class="titulo-card-conteudo">Suporte em T.I</h3>
+                        <p class="paragrafo-card-conteudo">Manutenção, reparo e diagnóstico de computadores e instalação de sistemas operacionais.</p>
+                        <a href="#" class="ver-detalhes">Ver Detalhes</a>
                     </div>
                 </div>
 
                 <div class="card-curso">
                     <div class="top-card">
-                        <img src="assets/img/vendas.jpg" alt="Foto do curso de Vendas e Atendimento ao Cliente">
+                        <img src="assets/img/vendas.jpg" loading="lazy" alt="Foto do curso de Vendas e Atendimento ao Cliente">
                         <span class="card-badge">Aprendizagem</span>
                     </div>
                     <div class="card-conteudo">
-                        <h4>Vendas e Atendimento ao Cliente</h4>
-                        <p>Técnicas de vendas, atendimento ao cliente e negociação comercial.</p>
-                        <a href="#">Ver Detalhes</a>
+                        <h3 class="titulo-card-conteudo">Vendas e Atendimento ao Cliente</h3>
+                        <p class="paragrafo-card-conteudo">Técnicas de vendas, atendimento ao cliente e negociação comercial.</p>
+                        <a href="#" class="ver-detalhes">Ver Detalhes</a>
                     </div>
                 </div>
             </div>
@@ -249,7 +260,7 @@
                     </div>
 
                     <div class="campo-curto">
-                        <label for="logradouro">Número</label>
+                        <label for="numero">Número</label>
                         <input type="text" id="numero">
                     </div>
                 </div>
@@ -275,7 +286,7 @@
                     <div class="linha">
                         <div class="campo-largo">
                             <label for="select-cursos">Selecione um curso</label>
-                            <select id="select-cursos">
+                            <select id="select-cursos" required>
                             <option value="">Selecione um curso</option>
                             <option value="adm">Assistente Admnistrativo</option>
                             <option value="cabelo">Assistente de Cabeleireiro</option>
@@ -294,7 +305,7 @@
 
                         <div class="campo-curto periodo">
                             <label for="periodo">Período de Preferência</label>
-                            <select id="select-periodo">
+                            <select id="select-periodo" required>
                                 <option value="">Selecione</option>
                                 <option value="manha">Manhã</option>
                                 <option value="tarde">Tarde</option>
@@ -303,10 +314,57 @@
                     </div>
                 </fieldset>
 
-                <p id="aviso" class="aviso"></p>
                 <button type="submit" class="btn">Enviar inscrição</button>
         </form>
+        </section>
+        </main>
+        <section class="faq" id="faq">
+                <h2 class="faq-titulo">Perguntas Frequentes (FAQ)</h2>
+                <details>
+                    <summary>O curso é gratuito?</summary>
+                    <p class="paragrafo-faq">Sim! Todos os cursos oferecidos pela Fundação O Pão dos Pobres são completamente gratuitos para os participantes que atendem aos requisitos de elegibilidade.</p>
+                </details>
 
+                <details>
+                    <summary>Quais os requisitos para me inscrever?</summary>
+                    <p class="paragrafo-faq">É importante o candidato estar regularmente matriculado e frequentando as aulas caso não tenha concluído o Ensino Médio;  possuir a documentação completa RG, CPF, Carteira de Trabalho digital, PIS, NIS ou NIT, título de eleitor (se maior de 18 anos) e liberação do quartel (homens maiores de 18 anos).</p>
+                </details>
+
+                <details>
+                    <summary>O curso emite certificado?</summary>
+                    <p class="paragrafo-faq">Sim! Ao concluir o curso com aproveitamento satisfatório e frequência mínima, você receberá um certificado reconhecido pela Fundação O Pão dos Pobres, que pode ser utilizado em processos seletivos e no mercado de trabalho.</p>
+                </details>
+        </section>
+        <footer class="footer">
+        <div class="footer-conteudo">
+        <div class="footer-col">
+            <img src="assets/img/logo-big.png" alt="Logo Fundação O Pão dos Pobres" class="footer-logo">
+            <p>Há mais de 150 anos formando profissionais em Porto Alegre.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4 class="titulo-footer-col">Links Rápidos</h4>
+            <ul>
+                <li><a href="#cursos">Cursos</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#inscreva-se">Inscreva-se</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4 class="titulo-footer-col">Redes Sociais</h4>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/paodospobres" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/company/fundacao-pao-dos-pobres" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/fundacaopaodospobres" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-copy">
+        <p>&copy; 2026 Fundação O Pão dos Pobres. Todos os direitos reservados.</p>
+    </div>
+</footer>
         <div id="caixaAgradecimento" class="modal-fundo">
             <div class="modal-conteudo">
                 <h2 class="titulo-modal-conteudo">Obrigado!</h2>
@@ -314,25 +372,5 @@
                 <button id="fecharModal">Fechar</button>
             </div>
         </div>
-
-        </section>
-        <section class="faq" id="faq">
-                <h2 class="faq__titulo">Perguntas Frequentes (FAQ)</h2>
-                <details>
-                    <summary>O curso é gratuito?</summary>
-                    <p>Sim! Todos os cursos oferecidos pela Fundação O Pão dos Pobres são completamente gratuitos para os participantes que atendem aos requisitos de elegibilidade.</p>
-                </details>
-
-                <details>
-                    <summary>Quais os requisitos para me inscrever?</summary>
-                    <p>É importante o candidato estar regularmente matriculado e frequentando as aulas caso não tenha concluído o Ensino Médio;  possuir a documentação completa RG, CPF, Carteira de Trabalho digital, PIS, NIS ou NIT, título de eleitor (se maior de 18 anos) e liberação do quartel (homens maiores de 18 anos).</p>
-                </details>
-
-                <details>
-                    <summary>O curso emite certificado?</summary>
-                    <p>Sim! Ao concluir o curso com aproveitamento satisfatório e frequência mínima, você receberá um certificado reconhecido pela Fundação O Pão dos Pobres, que pode ser utilizado em processos seletivos e no mercado de trabalho.</p>
-                </details>
-        </section>
-    </main>
 </body>
 </html>
