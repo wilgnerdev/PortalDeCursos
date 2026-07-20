@@ -50,12 +50,31 @@ p {
     font-family: var(--fonte-texto);
 }
 
-.header {
-    height: 15vh;
+.nav-social {
+    height: 7vh;
+    display: flex;
+    background-color: var(--azul-pao);
+    align-items: center;
+}
+
+.nav-social nav {
+    position: absolute;
+    right: 3rem;
+}
+
+.nav-social nav a{
+    margin: 0 16px;
+    font-size: 18px;
+    color: var(--branco-puro);
+}
+
+.navbar {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--fundo-off-white);
+    background: var(--fundo-off-white); 
+    height: 14vh;
+    position: relative;
 }
 
 .logo img {
@@ -63,18 +82,26 @@ p {
     width: auto;
 }
 
-.nav-header ul {
-    display: flex;
-    gap: 30px;
+.nav-list {
     list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    margin: 0 16px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.nav-list a {
+    color: var(--azul-pao);
+    text-decoration: none;
+    transition: 0.3s;
     text-transform: uppercase;
 }
 
-.nav-header a {
-    text-decoration: none;
-    color: var(--azul-pao);
-    font-weight: bold;
-    font-size: 20px;
+.nav-list a:hover {
+    color: var(--azul-claro);
 }
 
 .main-destaque {
@@ -228,7 +255,7 @@ p {
     padding: 1.5rem;
 }
 
-.card-conteudo h4 {
+.titulo-card-conteudo {
     font-size: 22px;
     color: var(--azul-claro);
     margin: 15px 0;
@@ -237,12 +264,12 @@ p {
     align-items: center;
 }
 
-.card-conteudo p {
+.paragrafo-card-conteudo {
     margin-bottom: 20px;
     min-height: 72px;
 }
 
-.card-conteudo a {
+.ver-detalhes {
     margin-top: auto;
     text-align: center;
     text-decoration: none;
@@ -409,7 +436,7 @@ p {
     padding: 2rem 4rem;
 }
 
-.faq__titulo {
+.faq-titulo {
     color: var(--azul-claro);
     padding-top: 6rem;
     margin-bottom: 30px;
@@ -428,24 +455,118 @@ p {
     cursor: pointer;
 }
 
-.faq p {
+.paragrafo-faq {
     font-size: 17px;
     line-height: 1.5rem;
     padding: 20px;
 }
 
+/* Footer */
+
+.footer {
+    background-color: var(--azul-footer);
+    color: var(--branco-puro);
+    padding: 4rem 4rem 0;
+}
+
+.footer-conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-logo {
+    height: 80px;
+    margin-bottom: 12px;
+}
+
+.footer-col p {
+    color: var(--branco-puro);
+    font-size: 15px;
+    opacity: 0.85;
+}
+
+.titulo-footer-col {
+    font-family: var(--fonte-texto);
+    margin-bottom: 12px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col a {
+    color: var(--branco-puro);
+    text-decoration: none;
+    opacity: 0.85;
+    transition: 0.3s;
+}
+
+.footer-col a:hover {
+    opacity: 1;
+    color: var(--dourado-frio);
+}
+
+.footer-social {
+    display: flex;
+    gap: 16px;
+    font-size: 20px;
+}
+
+.footer-copy {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+.footer-copy p {
+    color: #fff;    
+}
+
+@media(max-width: 586px) {
+    .footer {
+        padding: 3rem 1.5rem 0;
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}
+
 /* Media query */
 
 @media(max-width: 900px){
-    .header {
-        margin-top: 6px;
-        flex-direction: column;
-        height: 25vh;
-        padding: 10px 0 10px 0;
+    .nav-social nav {
+        position: static;
+        display: flex;
+        width: 100%;
+        right: inherit;
+        justify-content: space-around;
     }
 
-    .nav-header a {
-        font-size: 16px;
+    .nav-list {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: var(--fundo-off-white);
+        height: 5vh;
+        width: 100vw;
+        justify-content: space-around;
     }
 
     .main-destaque {
@@ -492,7 +613,7 @@ p {
 
     .campo-curto {
     width: 90px;
-}
+    }
 
     .periodo {
         width: 100%;
@@ -501,10 +622,18 @@ p {
     .titulo__form {
         font-size: 28px;
     }
+
+    .faq-titulo {
+        font-size: 28px;
+    }
 }
 
 /* Celulares */
-/* @media(max-width: 466px) {
+@media(max-width: 466px) {
+    .nav-list li {
+        font-size: 15px;
+    }
+
      .main-title {
         font-size: 18px;
     }
@@ -516,7 +645,7 @@ p {
     .sobre-titulo {
         font-size: 32px;
     }
-} */
+}
 
 @media(max-width: 408px){
      .nav-header a {
@@ -531,4 +660,10 @@ p {
     font-size: 14px;
    }
 
+}
+
+@media(max-width: 370px) {
+    .nav-list li {
+        font-size: 13px;
+    }
 }
