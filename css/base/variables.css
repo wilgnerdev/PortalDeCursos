@@ -1,0 +1,32 @@
+:root {
+  /* Cores Principais (Identidade) */
+  --azul-pao: rgb(0, 56, 117);          /* Azul oficial do logo e cabeçalhos */
+  --azul-claro: rgb(0, 114, 206);        /* Azul das quadras e botões de ação */
+  --texto-principal: rgb(50, 50, 50);    /* Cor padrão para parágrafos e textos longos */
+  --branco-puro: rgb(255, 255, 255);     /* Para textos sobre fundos escuros */
+  --cinza-claro: #f5f5f5; /* Backgorund em fundos de seção */
+  --cor-preto: #333333;
+  --cor-cinza-texto: #666666;
+  --cor-cinza-medio: #e0e0e0;
+
+  /* Fontes */
+  --fonte-destaque: "Outfit", sans-serif;
+  --fonte-texto: "Inter", sans-serif;
+
+  /* Cores de Detalhe e Tradição (130 Anos) */
+  --dourado-frio: rgb(197, 168, 115);    /* Cor dos ícones e selo comemorativo  */
+  --fundo-off-white: rgb(248, 247, 242); /* Fundo suave para não cansar a vista */
+  --azul-aco-divisor: rgb(165, 181, 201);/* Cor para linhas e bordas de separação */
+  --azul-marinho-profundo: rgb(15, 35, 70);/* Usado em ícones de serviços */
+  --cor-azul-escuro: #004a99; /* Hover de cards azul-pao */
+  --cor-laranja-hover: #e65c00; /* Hover para botões laranjas */
+
+
+  /* Cores de Inovação (Hub e Modernidade) */
+  --rosa-hub: rgb(231, 46, 114);         /* Para seções modernas e áreas de convivência */
+  --verde-agua-hub: rgb(0, 168, 176);    /* Ótimo para destacar cursos de tecnologia */
+   --verde-agua: #00d1d3;  /* Mesma cor aqua azul do site oficial, para dar um destaque nos hovers */
+   --azul-footer: #006F9A; /* Mesma cor do footer do site oficial */
+  --laranja-alerta: rgb(243, 115, 33);    /* Para sinalizações ou botões de "Doe Agora" */
+  --amarelo-hub: rgb(255, 212, 0);       /* Destaque para cursos de gastronomia */
+}
