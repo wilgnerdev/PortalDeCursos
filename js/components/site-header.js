@@ -17,7 +17,7 @@ class SiteHeader extends HTMLElement {
             </div>
 
             <nav class="navbar">
-                <a class="logo" href="/"><img src="assets/images/logo-pao-dos-pobres.png" alt="Logo Fundação O Pão dos Pobres"></a>
+                <a class="logo" href="#"><img src="assets/images/logo-pao-dos-pobres.png" alt="Logo Fundação O Pão dos Pobres"></a>
                 <ul class="nav-list">
                     <li><a href="#">Home</a></li>
                     <li><a href="#cursos">Cursos</a></li>
