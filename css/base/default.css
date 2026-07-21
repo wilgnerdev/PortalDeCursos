@@ -1,0 +1,12 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fonte-destaque);
+}
+
+p {
+    color: var(--texto-principal);
+    font-family: var(--fonte-texto);
+}

@@ -1,0 +1,36 @@
+.faq {
+    background-color: var(--cinza-claro);
+    padding: 2rem 4rem;
+}
+
+.faq-titulo {
+    color: var(--azul-claro);
+    padding-top: 6rem;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.faq details {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 30px;
+}
+
+.faq summary {
+    font-size: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.paragrafo-faq {
+    font-size: 17px;
+    line-height: 1.5rem;
+    padding: 20px;
+}
+
+@media(max-width: 586px) {
+    
+    .faq-titulo {
+        font-size: 28px;
+    }
+}
