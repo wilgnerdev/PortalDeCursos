@@ -104,6 +104,11 @@
     font-size: 18px;
     text-transform: uppercase;
     font-weight: bold;
+    transition: 0.5s;
+}
+
+.formulario .btn:hover {
+    background-color: var(--cor-laranja-hover);
 }
 
 @media(max-width: 586px) {

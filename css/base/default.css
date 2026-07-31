@@ -1,8 +1,6 @@
-html {
+html, body {
     scroll-behavior: smooth;
-}
-
-body {
+    overflow-x: hidden;
     font-family: var(--fonte-destaque);
 }
 
