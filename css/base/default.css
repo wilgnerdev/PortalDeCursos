@@ -1,8 +1,6 @@
-html {
+html, body {
     scroll-behavior: smooth;
-}
-
-body {
+    overflow-x: hidden;
     font-family: var(--fonte-destaque);
 }
 
@@ -10,8 +8,3 @@ p {
     color: var(--texto-principal);
     font-family: var(--fonte-texto);
 }
-
-.page-wrapper {
-        overflow-x: hidden;    
-        position: relative;
-    }

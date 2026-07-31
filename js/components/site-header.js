@@ -23,11 +23,11 @@ class SiteHeader extends HTMLElement {
                     <div class="line2"></div>
                     <div class="line3"></div>
                 </div>
-                <ul class="nav-list">
+                <ul class="nav-list" inert>
                     <li><a href="#">Home</a></li>
                     <li><a href="#cursos">Cursos</a></li>
                     <li><a href="#faq">Faq</a></li>
-                    <li><a href="#inscreva-se">Inscrever-se</a></li>
+                    <li><a class="btn list" href="#inscreva-se">Inscrever-se</a></li>
                     <!-- <li><a href="https://www.paodospobres.org.br/" target="_blank">Site oficial</a></li> -->
                 </ul>
             </nav>
