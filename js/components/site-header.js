@@ -23,7 +23,7 @@ class SiteHeader extends HTMLElement {
                     <div class="line2"></div>
                     <div class="line3"></div>
                 </div>
-                <ul class="nav-list" inert>
+                <ul class="nav-list">
                     <li><a href="#">Home</a></li>
                     <li><a href="#cursos">Cursos</a></li>
                     <li><a href="#faq">Faq</a></li>
