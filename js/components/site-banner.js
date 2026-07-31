@@ -4,7 +4,7 @@ class SiteBanner extends HTMLElement {
             `<section class="banner-destaque">
                 <div class="texto-banner-destaque">
                     <h1 class="banner-title">Aprendizagem Profissional e Cursos de Qualificação</h1>
-                    <a class="btn-banner" href="#inscreva-se">Inscreva-se gratuitamente</a>
+                    <a class="btn" href="#inscreva-se">Inscreva-se gratuitamente</a>
                 </div>
             </section>`
             ;

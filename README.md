@@ -2,8 +2,7 @@
 
 Portal público para divulgação de cursos profissionalizantes gratuitos da **Fundação O Pão dos Pobres**, com formulário de inscrição online. Projeto desenvolvido como atividade prática da trilha **Dev Full Stack Jr. (+praTI / Codifica)** e, em paralelo, como base do meu Trabalho de Conclusão de Curso (TCC).
 
-> 🎓 Cada entrega do +praTI é também um marco real do TCC — o roadmap completo está descrito na seção [Roadmap do Projeto](#-roadmap-do-projeto).
-
+> 🎓 Cada entrega do +praTI é também um marco real do TCC.
 ---
 
 ## Sobre a Fundação
@@ -29,7 +28,7 @@ A Fundação O Pão dos Pobres oferece cursos profissionalizantes gratuitos para
 |---|---|
 | Tipografia (títulos) | [Outfit](https://fonts.google.com/specimen/Outfit) |
 | Tipografia (corpo/formulários) | [Inter](https://fonts.google.com/specimen/Inter) |
-| Ícones | [Tabler Icons](https://tabler.io/icons) |
+| Ícones | [Cdn Js](https://cdnjs.com/libraries/font-awesome/7.0.1) |
 
 ---
 
