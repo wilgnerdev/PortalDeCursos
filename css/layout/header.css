@@ -1,6 +1,5 @@
-
 .nav-social {
-    height: 7vh;
+    height: 5vh;
     display: flex;
     background-color: var(--azul-pao);
     align-items: center;
@@ -8,7 +7,7 @@
 
 .nav-social nav {
     position: absolute;
-    right: 3rem;
+    right: 12.5rem;
 }
 
 .nav-social nav a{
@@ -20,8 +19,7 @@
 .navbar {
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    background: var(--fundo-off-white); 
+    align-items: center; 
     height: 14vh;
     position: relative;
 }
