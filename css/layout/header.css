@@ -22,6 +22,7 @@
     align-items: center; 
     height: 14vh;
     position: relative;
+    background: #fff;
 }
 
 .logo img {
@@ -83,7 +84,7 @@
         position: absolute;
         top: 100%;
         right: 0;
-        background: var(--fundo-off-white);
+        background: #fff;
         height: 50vh;
         width: 100%;
         flex-direction: column;

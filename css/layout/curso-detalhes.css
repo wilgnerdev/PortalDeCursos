@@ -1,3 +1,7 @@
+body {
+    background: var(--azul-claro-bg);
+}
+
 .curso-banner {
     background-image: 
     linear-gradient(to right, rgba(13, 43, 82, 0.85), rgba(13, 43, 82, 0.15)), 
@@ -30,6 +34,139 @@
     line-height: 1.5rem;
 }
 
+.curso-detalhes-main {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 60px;
+    align-items: start;
+    padding: 56px 24px;
+}
+
+.coluna-principal {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    order: 2;
+}
+
+.secao-curso {
+    background: #fff;
+    border: 1px solid var(--linha-card);
+    border-radius: 15px;
+    padding: 2rem 3rem;
+}
+
+.secao-titulo {
+    color: var(--azul-pao);
+    opacity: 1;
+    font-size: 1.9rem;
+    margin-bottom: 30px;
+    letter-spacing: -0.01em;
+}
+
+.secao-texto {
+    max-width: 56ch;
+    line-height: 1.75;
+    color: var(--cinza-opaco);
+}
+
+.skills-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-row {
+    display: flex;
+    gap: 16px;
+    padding: 16px 8px;
+    align-items: center;
+    border-bottom: 1px solid var(--linha-card);
+}
+
+.skill-row:last-child {
+    border-bottom: none;
+}
+
+.skill-icone {
+    flex: 0 0 auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 11px;
+    background: var(--bg-azul-icone);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--azul-icone);
+}
+
+.skill-titulo {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.skill-sub {
+    font-size: 0.9rem;
+    color: var(--cinza-opaco);
+}
+
+.sidebar-card {
+    order: 1;
+    background: #fff;
+    border: 1px solid var(--linha-card);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 18px 40px -22px rgba(8, 44, 87, 0.35);
+}
+
+.sidebar-topo {
+    padding: 22px 28px 30px;
+    background: var(--azul-pao);
+}
+
+.sidebar-info {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.65);
+    margin: 0 0 6px;
+}
+
+.sidebar-titulo {
+    font-family: var(--fonte-destaque);
+    font-weight: 700;
+    font-size: 20px;
+    margin: 0;
+    letter-spacing: -0.01em;
+    color: #fff;
+}
+
+.sidebar-body {
+    padding: 26px 28px 28px;
+}
+
+.info-row {
+   
+    gap: 14px;
+    padding: 13px 0;
+    flex-wrap: wrap;
+}
+
+.info-icone {
+    flex: 0 0 auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 11px;
+    background: var(--bg-azul-icone);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--azul-icone);
+}
+
 .skill-icone svg {
     width: 20px;
     height: 20px;
@@ -38,4 +175,35 @@
 .info-icone svg {
     width: 20px;
     height: 20px;
+}
+
+.situacao-badge svg {
+    width: 12px;
+    height: 12px;
+}
+
+
+@media(min-width: 992px) {
+    .curso-detalhes-main {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .coluna-principal,
+    .sidebar-card {
+        order: initial;
+    }
+
+    .sidebar-card {
+    position: sticky;
+    top: 24px;
+    align-self: start;
+    }
+
+}
+
+@media(max-width: 786px) {
+    
+    .skill-row {
+        flex-wrap: wrap;
+    }
 }

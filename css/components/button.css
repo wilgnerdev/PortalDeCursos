@@ -13,3 +13,18 @@
 .btn:hover {
     background-color: var(--verde-agua-hub);
 }
+
+.ver-detalhes {
+    margin-top: auto;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--verde-agua-hub);
+    border-radius: 8px;
+    padding: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 100%;
+    display: block;
+    border: none;
+}
