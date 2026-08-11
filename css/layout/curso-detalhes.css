@@ -21,7 +21,6 @@
     color: #fff;
     font-size: clamp(1.75rem, 5vw, 3.125rem);
     font-weight: 900;
-   
     line-height: 1;
     margin-bottom: 25px;
 }
@@ -29,4 +28,14 @@
 .texto-banner p {
     color: #fff;
     line-height: 1.5rem;
+}
+
+.skill-icone svg {
+    width: 20px;
+    height: 20px;
+}
+
+.info-icone svg {
+    width: 20px;
+    height: 20px;
 }

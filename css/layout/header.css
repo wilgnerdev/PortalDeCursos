@@ -1,5 +1,5 @@
 .nav-social {
-    height: 5vh;
+    height: 7vh;
     display: flex;
     background-color: var(--azul-pao);
     align-items: center;
@@ -7,7 +7,7 @@
 
 .nav-social nav {
     position: absolute;
-    right: 12.5rem;
+    right: 2rem;
 }
 
 .nav-social nav a{
