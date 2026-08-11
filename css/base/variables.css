@@ -8,6 +8,9 @@
   --cor-preto: #333333;
   --cor-cinza-texto: #666666;
   --cor-cinza-medio: #e0e0e0;
+  --azul-claro-bg: #f2f6f8;
+  --linha-card: #e1e7ed; 
+  --cinza-opaco: #5b6672;
 
   /* Fontes */
   --fonte-destaque: "Outfit", sans-serif;
@@ -25,8 +28,12 @@
   /* Cores de Inovação (Hub e Modernidade) */
   --rosa-hub: rgb(231, 46, 114);         /* Para seções modernas e áreas de convivência */
   --verde-agua-hub: rgb(0, 168, 176);    /* Ótimo para destacar cursos de tecnologia */
-   --verde-agua: #00d1d3;  /* Mesma cor aqua azul do site oficial, para dar um destaque nos hovers */
-   --azul-footer: #006F9A; /* Mesma cor do footer do site oficial */
+  --verde-agua: #00d1d3;  /* Mesma cor aqua azul do site oficial, para dar um destaque nos hovers */
+  --azul-footer: #006F9A; /* Mesma cor do footer do site oficial */
   --laranja-alerta: rgb(243, 115, 33);    /* Para sinalizações ou botões de "Doe Agora" */
   --amarelo-hub: rgb(255, 212, 0);       /* Destaque para cursos de gastronomia */
+
+  /* Ícones */
+  --azul-icone: #0e7986;
+  --bg-azul-icone: #e4f5f7;
 }

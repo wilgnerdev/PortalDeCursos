@@ -78,17 +78,6 @@
     min-height: 72px;
 }
 
-.ver-detalhes {
-    margin-top: auto;
-    text-align: center;
-    text-decoration: none;
-    color: #fff;
-    background-color: var(--verde-agua-hub);
-    border-radius: 8px;
-    padding: 12px;
-    text-transform: uppercase;
-    font-weight: bold;
-}
 
 @media (max-width: 709px) {
     .curso-section {

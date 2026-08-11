@@ -1,6 +1,6 @@
 html, body {
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    overflow-x: clip;
     font-family: var(--fonte-destaque);
 }
 
@@ -8,3 +8,4 @@ p {
     color: var(--texto-principal);
     font-family: var(--fonte-texto);
 }
+
