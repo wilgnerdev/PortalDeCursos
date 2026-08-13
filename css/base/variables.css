@@ -8,9 +8,9 @@
   --cor-preto: #333333;
   --cor-cinza-texto: #666666;
   --cor-cinza-medio: #e0e0e0;
-  --azul-claro-bg: #f2f6f8;
-  --linha-card: #e1e7ed; 
-  --cinza-opaco: #5b6672;
+  --bg-cinza-claro: #F2F6F8;
+  --cinza-opaco: #5B6672;
+  --azul-escuro: #082C57;
 
   /* Fontes */
   --fonte-destaque: "Outfit", sans-serif;
@@ -33,7 +33,7 @@
   --laranja-alerta: rgb(243, 115, 33);    /* Para sinalizações ou botões de "Doe Agora" */
   --amarelo-hub: rgb(255, 212, 0);       /* Destaque para cursos de gastronomia */
 
-  /* Ícones */
-  --azul-icone: #0e7986;
-  --bg-azul-icone: #e4f5f7;
+  --linha-card: #E1E7ED;;
+  --cor-icone: #0E7986;
+  --bg-icone: #E4F5F7;
 }

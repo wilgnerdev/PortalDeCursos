@@ -1,5 +1,5 @@
 body {
-    background: var(--azul-claro-bg);
+    background: var(--bg-cinza-claro);
 }
 
 .curso-banner {
@@ -39,50 +39,54 @@ body {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 60px;
+    gap: 28px;
     align-items: start;
     padding: 56px 24px;
 }
 
-.coluna-principal {
+.curso-principal {
+    order: 1;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    order: 2;
 }
 
 .secao-curso {
     background: #fff;
     border: 1px solid var(--linha-card);
-    border-radius: 15px;
-    padding: 2rem 3rem;
+    border-radius: 16px;
+    padding: 36px 40px;
 }
 
 .secao-titulo {
-    color: var(--azul-pao);
-    opacity: 1;
+    font-weight: 700;
     font-size: 1.9rem;
-    margin-bottom: 30px;
+    color: var(--azul-pao);
+    margin: 0 0 16px;
     letter-spacing: -0.01em;
 }
 
 .secao-texto {
-    max-width: 56ch;
+    font-size: 1rem;
     line-height: 1.75;
     color: var(--cinza-opaco);
+    margin: 0;
+    max-width: 56ch;
 }
 
 .skills-list {
     display: flex;
     flex-direction: column;
+    gap: 2px;
 }
 
 .skill-row {
     display: flex;
+    align-items: flex-start;
     gap: 16px;
     padding: 16px 8px;
-    align-items: center;
     border-bottom: 1px solid var(--linha-card);
+    flex-wrap: wrap;
 }
 
 .skill-row:last-child {
@@ -94,26 +98,32 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 11px;
-    background: var(--bg-azul-icone);
+    background: var(--bg-icone);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--azul-icone);
+    color: var(--cor-icone);
+}
+
+.skill-body {
+    padding-top: 8px;
 }
 
 .skill-titulo {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin: 0 0 3px;
 }
 
 .skill-sub {
-    font-size: 0.9rem;
+    font-size: 13.5px;
     color: var(--cinza-opaco);
+    margin: 0;
+    line-height: 1.5;
 }
 
 .sidebar-card {
-    order: 1;
+    order: -1;   
     background: #fff;
     border: 1px solid var(--linha-card);
     border-radius: 18px;
@@ -122,8 +132,26 @@ body {
 }
 
 .sidebar-topo {
+    position: relative;
+    background: linear-gradient(135deg, var(--azul-pao) 0%, var(--azul-escuro) 100%);
     padding: 22px 28px 30px;
-    background: var(--azul-pao);
+}
+
+.badge-mark {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    width: 34px;
+    height: 34px;
+    opacity: 0.16;
+}
+
+.badge-hole {
+    width: 34px;
+    height: 8px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.18);
+    margin: 0 auto 16px;
 }
 
 .sidebar-info {
@@ -149,22 +177,67 @@ body {
 }
 
 .info-row {
-   
+    display: flex;
+    align-items: flex-start;
     gap: 14px;
     padding: 13px 0;
+    border-bottom: 1px solid var(--linha-card);
     flex-wrap: wrap;
 }
 
 .info-icone {
     flex: 0 0 auto;
-    width: 40px;
-    height: 40px;
-    border-radius: 11px;
-    background: var(--bg-azul-icone);
+    width: 30px;
+    height: 30px;
+    border-radius: 9px;
+    background: var(--bg-icone);
+    color: var(--cor-icone);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--azul-icone);
+}
+
+.info-label {
+    font-size: 0.8rem;
+    color: var(--cinza-opaco);
+    margin: 0 0 2px;
+    font-weight: 500;
+}
+
+.info-value {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.info-nota {
+    font-size: 0.8rem;
+    margin: 12px 0;
+    color: var(--cinza-opaco);
+    font-style: italic;
+    padding-left: 2px;
+}
+
+.btn-sidebar {
+    display: block;
+    margin-top: auto;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--laranja-alerta);
+    border-radius: 8px;
+    padding: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 100%;
+}
+
+.cta-sub {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--cinza-opaco);
+    margin: 15px 0 0 0;
 }
 
 .skill-icone svg {
@@ -173,37 +246,22 @@ body {
 }
 
 .info-icone svg {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
 }
 
-.situacao-badge svg {
-    width: 12px;
-    height: 12px;
-}
-
-
-@media(min-width: 992px) {
+@media (min-width: 1090px) {
     .curso-detalhes-main {
         grid-template-columns: 2fr 1fr;
     }
 
-    .coluna-principal,
+    .curso-principal,
     .sidebar-card {
         order: initial;
     }
 
     .sidebar-card {
-    position: sticky;
-    top: 24px;
-    align-self: start;
-    }
-
-}
-
-@media(max-width: 786px) {
-    
-    .skill-row {
-        flex-wrap: wrap;
+        position: sticky;
+        top: 24px;
     }
 }
