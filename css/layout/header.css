@@ -1,3 +1,7 @@
+header {
+    background-color: #fff;
+}
+
 .nav-social {
     height: 7vh;
     display: flex;
