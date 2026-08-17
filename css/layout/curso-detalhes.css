@@ -5,7 +5,8 @@ body {
 .curso-banner {
     background-image: 
     linear-gradient(to right, rgba(13, 43, 82, 0.85), rgba(13, 43, 82, 0.15)), 
-    url('../../assets/images/aprendizagem-profissional-suporte-ti.webp');
+    var(--curso-imagem-banner, none);
+    background-color: var(--azul-marinho-profundo);
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -231,6 +232,11 @@ body {
     text-transform: uppercase;
     font-weight: bold;
     width: 100%;
+    transition: 0.5s;
+}
+
+.btn-sidebar:hover {
+    background-color: var(--verde-agua-hub);
 }
 
 .cta-sub {
@@ -240,14 +246,48 @@ body {
     margin: 15px 0 0 0;
 }
 
-.skill-icone svg {
-    width: 20px;
-    height: 20px;
+.skill-icone i {
+    font-size: 20px;
+    line-height: 1;
 }
 
-.info-icone svg {
-    width: 15px;
-    height: 15px;
+.info-icone i {
+    font-size: 16px;
+    line-height: 1;
+}
+
+.voltar {
+    background: #fff;
+}
+
+.voltar-body {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.voltar-titulo {
+    font-size: clamp(0.9rem, 5vw, 2rem);
+    color: var(--azul-pao);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.btn-voltar {
+    margin: 0 auto;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--azul-pao);
+}
+
+.btn-voltar a {
+    text-decoration: none;
+    color: #fff;
 }
 
 @media (min-width: 1090px) {

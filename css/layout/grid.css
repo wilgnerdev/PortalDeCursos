@@ -4,7 +4,7 @@
 }
 
 .curso-titulo {
-    color: var(--azul-claro);
+    color: var(--cor-azul-escuro);
     font-size: 38px;
     text-align: center;
     margin-bottom: 30px;
@@ -50,7 +50,7 @@
     bottom: 15px;
     right: 12px;
     color: #fff;
-    background-color: var(--verde-agua-hub);
+    background-color: var(--azul-claro);
     border-radius: 20px;
     padding: 4px 12px;
     font-size: 15px;

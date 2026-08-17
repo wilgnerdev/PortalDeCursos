@@ -19,7 +19,7 @@
     text-align: center;
     text-decoration: none;
     color: #fff;
-    background-color: var(--verde-agua-hub);
+    background-color: var(--azul-claro);
     border-radius: 8px;
     padding: 12px;
     text-transform: uppercase;
@@ -27,4 +27,9 @@
     width: 100%;
     display: block;
     border: none;
+    transition: 0.5s;
+}
+
+.ver-detalhes:hover {
+    background-color: var(--azul-pao);
 }
