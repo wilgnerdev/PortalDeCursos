@@ -4,7 +4,7 @@
 }
 
 .curso-titulo {
-    color: var(--cor-azul-escuro);
+    color: var(--azul-claro);
     font-size: 38px;
     text-align: center;
     margin-bottom: 30px;
@@ -27,11 +27,18 @@
 }
 
 .card-curso {
+    background: #fff;
     border-radius: 8px;
     overflow: hidden;
     display: flex;
     flex-direction: column; 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 6px rgba(13, 43, 82, 0.06);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.card-curso:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(13, 43, 82, 0.12);
 }
 
 .card-curso img {
@@ -50,7 +57,7 @@
     bottom: 15px;
     right: 12px;
     color: #fff;
-    background-color: var(--azul-claro);
+    background-color: var(--verde-agua-hub);
     border-radius: 20px;
     padding: 4px 12px;
     font-size: 15px;

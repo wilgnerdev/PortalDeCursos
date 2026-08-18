@@ -256,40 +256,6 @@ body {
     line-height: 1;
 }
 
-.voltar {
-    background: #fff;
-}
-
-.voltar-body {
-    max-width: 1500px;
-    margin: 0 auto;
-    padding: 4rem 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.voltar-titulo {
-    font-size: clamp(0.9rem, 5vw, 2rem);
-    color: var(--azul-pao);
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.btn-voltar {
-    margin: 0 auto;
-    border-radius: 5px;
-    cursor: pointer;
-    display: block;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--azul-pao);
-}
-
-.btn-voltar a {
-    text-decoration: none;
-    color: #fff;
-}
-
 @media (min-width: 1090px) {
     .curso-detalhes-main {
         grid-template-columns: 2fr 1fr;

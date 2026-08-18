@@ -84,7 +84,9 @@ class SiteGrid extends HTMLElement {
                 <div class="card-conteudo">
                     <h3 class="titulo-card-conteudo">${curso.titulo}</h3>
                     <p class="paragrafo-card-conteudo">${curso.desc}</p>
-                   <a href="curso-detalhes.html?curso=${curso.id}" class="ver-detalhes">Ver Detalhes</a>
+                   <a href="curso-detalhes.html?curso=${curso.id}" class="ver-detalhes">Ver Detalhes
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M9 5l7 7-7 7"></path></svg>
+                   </a>
                 </div>
             </div>
             `).join('');
