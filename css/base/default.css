@@ -2,6 +2,7 @@ html, body {
     scroll-behavior: smooth;
     overflow-x: clip;
     font-family: var(--fonte-destaque);
+    background-color: var(--cinza-claro);
 }
 
 p {

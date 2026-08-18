@@ -1,36 +1,43 @@
 class SiteFooter extends HTMLElement {
     connectedCallback() {
         this.innerHTML =
-            `<footer class="footer">
-                <div class="footer-conteudo">
-                <div class="footer-col">
-                    <img src="assets/images/logo-big.png" alt="Logo Fundação O Pão dos Pobres" class="footer-logo">
-                    <p>Há mais de 150 anos formando profissionais em Porto Alegre.</p>
-                </div>
+            `
+            <footer>
 
-                <div class="footer-col">
-                    <h4 class="titulo-footer-col">Links Rápidos</h4>
-                    <ul>
-                        <li><a href="#cursos">Cursos</a></li>
-                        <li><a href="#faq">FAQ</a></li>
-                        <li><a href="#inscreva-se">Inscreva-se</a></li>
-                    </ul>
-                </div>
+                <div class="footer-container">
 
-                <div class="footer-col">
-                    <h4 class="titulo-footer-col">Redes Sociais</h4>
-                    <div class="footer-social">
-                        <a href="https://www.facebook.com/paodospobres" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="https://www.linkedin.com/company/fundacao-pao-dos-pobres" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="https://www.instagram.com/fundacaopaodospobres" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <div class="logo-footer"><img src="assets/images/logo-big.png" alt=""></div>
+
+                    <div class="adress-footer">
+                        <h4 class="adress-titulo">Endereço:</h4>
+                        <p>Rua da República, 801</p>
+                        <p>Cidade Baixa</p>
+                        <p>Porto Alegre / RS</p>
+                        <p>CEP 90050-321</p>
                     </div>
-                </div>
+
+                    <div class="adress-footer">
+                        <h4 class="adress-titulo">Contatos:</h4>
+                        <p>de segunda à sexta das 8h às 12h e das 13h às 17h20min.</p>
+                        <p>(51) 3433.6900 | (51) 3433.6902 </p>
+                        <p>relacaoinstitucional@paodospobres.com.br</p>
+                    </div>
+
+                    <div class="adress-footer">
+                        <h4 class="adress-titulo">Envie seu currículo:</h4>
+                        <p><a href="https://paodospobres.kretos.cc/">Acesse aqui:</a></p>
+                        <p>Seja um voluntário:</p>
+                        <p>voluntarios@paodospobres.com.br</p>
+                    </div>
+
+                    
+
                 </div>
 
-                <div class="footer-copy">
-                    <p>&copy; 2026 Fundação O Pão dos Pobres. Todos os direitos reservados.</p>
-                </div>
-            </footer>`
+                <p class="copyright">Copyright © 2026 - Wilgner Guimarães</p>
+
+             </footer>
+            `
             ;
     }
 }

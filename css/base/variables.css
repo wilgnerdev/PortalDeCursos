@@ -4,13 +4,14 @@
   --azul-claro: rgb(0, 114, 206);        /* Azul das quadras e botões de ação */
   --texto-principal: rgb(50, 50, 50);    /* Cor padrão para parágrafos e textos longos */
   --branco-puro: rgb(255, 255, 255);     /* Para textos sobre fundos escuros */
-  --cinza-claro: #f5f5f5; /* Backgorund em fundos de seção */
+  --cinza-claro: #f4f6f8 ; /* Backgorund em fundos de seção */
   --cor-preto: #333333;
   --cor-cinza-texto: #666666;
   --cor-cinza-medio: #e0e0e0;
-  --azul-claro-bg: #f2f6f8;
-  --linha-card: #e1e7ed; 
-  --cinza-opaco: #5b6672;
+  --bg-cinza-claro: #F2F6F8;
+  --cinza-opaco: #5B6672;
+  --azul-escuro: #082C57;
+
 
   /* Fontes */
   --fonte-destaque: "Outfit", sans-serif;
@@ -33,7 +34,8 @@
   --laranja-alerta: rgb(243, 115, 33);    /* Para sinalizações ou botões de "Doe Agora" */
   --amarelo-hub: rgb(255, 212, 0);       /* Destaque para cursos de gastronomia */
 
-  /* Ícones */
-  --azul-icone: #0e7986;
-  --bg-azul-icone: #e4f5f7;
+  --linha-card: #E1E7ED;;
+  --cor-icone: #0E7986;
+  --bg-icone: #E4F5F7;
+  --azul-oceano-escuro: #0b7c84;
 }

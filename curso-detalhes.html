@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suporte em T.I - Pão dos Pobres</title>
+    <title id="page-title">Curso - Pão dos Pobres</title>
     <!-- CSS -->
     <link rel="stylesheet" href="css/main.css">
     <!-- Ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.ico">
@@ -29,9 +30,11 @@
     <!-- JS -->
     <script type="module" src="js/pages/cadastro.js"></script>
     <script type="module" src="js/pages/formulario-interacao.js"></script>
+    <script type="module" src="js/pages/curso-dinamico.js"></script>
 
     <script src="js/components/site-header.js"></script>
     <script src="js/components/site-banner.js"></script>
+    <script src="js/components/site-voltar.js"></script>
     <script src="js/components/site-footer.js"></script>
     <script src="js/components/site-grid.js"></script>
     <script src="js/components/site-sobre.js"></script>
@@ -47,123 +50,95 @@
 
     <site-header></site-header>
 
-        <section class="curso-banner">
+    
+
+        <section class="curso-banner" id="curso-banner">
             <div class="texto-banner">
-            <h1>Suporte em T.I</h1>
-            <p>Montagem, manutenção de hardware e software, e administração de redes</p>
+            <h1 id="curso-titulo">Carregando curso...</h1>
+            <p id="curso-resumo"></p>
             </div>
         </section>
 
-        <main class="curso-detalhes-main">
+    <main class="curso-detalhes-main">
         
-        <section class="coluna-principal">
+        <section class="curso-principal">
             <div class="secao-curso">
                 <h2 class="secao-titulo">Sobre o curso</h2>
-                <p class="secao-texto">Capacita o jovem para a montagem e manutenção de hardware e software,instalação e atualização de sistemas operacionais e equipamentos, preparando-o para atuar em suporte técnico e infraestrutura de TI.
-                </p>
+                <p class="secao-texto" id="curso-sobre"></p>
             </div>
 
             <div class="secao-curso">
                 <h2 class="secao-titulo">O que você vai aprender?</h2>
-                <div class="skills-list">
-                    <div class="skill-row">
-                        <div class="skill-icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="1"></rect><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"></path></svg>
-                        </div>
-                        <div class="skill-body">
-                            <p class="skill-titulo">Montagem e manutenção de computadores</p>
-                            <p class="skill-sub">Da troca de peças ao diagnóstico de falhas de hardware.</p>
-                        </div>
-                    </div>
-                    <div class="skill-row">
-                        <div class="skill-icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"></path><path d="M7 10l5 5 5-5"></path><path d="M4 19h16"></path></svg>
-                        </div>
-                        <div class="skill-body">
-                            <p class="skill-titulo">Instalação de sistemas operacionais</p>
-                            <p class="skill-sub">Instalação, configuração e atualização de softwares.</p>
-                        </div>
-                    </div>
-                    <div class="skill-row">
-                        <div class="skill-icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="6" r="2.2"></circle><circle cx="19" cy="6" r="2.2"></circle><circle cx="12" cy="18" r="2.2"></circle><path d="M6.8 7.6L11 16.2M17.2 7.6L13 16.2"></path></svg>
-                        </div>
-                        <div class="skill-body">
-                            <p class="skill-titulo">Configuração de redes básicas</p>
-                            <p class="skill-sub">Cabeamento, roteadores e conexão de dispositivos em rede.</p>
-                        </div>
-                    </div>
-                    <div class="skill-row">
-                        <div class="skill-icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9a8 8 0 0116 0v5a2 2 0 01-2 2h-1v-6h3M4 14v-5h3v6H6a2 2 0 01-2-2z"></path></svg>
-                        </div>
-                        <div class="skill-body">
-                            <p class="skill-titulo">Suporte técnico ao usuário</p>
-                            <p class="skill-sub">Atendimento, escuta do problema e resolução guiada.</p>
-                        </div>
-                    </div>
-                    <div class="skill-row">
-                        <div class="skill-icone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z"></path></svg>
-                        </div>
-                        <div class="skill-body">
-                            <p class="skill-titulo">Segurança da informação: noções básicas</p>
-                            <p class="skill-sub">Boas práticas para proteger dados e equipamentos.</p>
-                        </div>
-                    </div>
+                <div class="skills-list" id="curso-skills">
+                    <!-- gerado dinamicamente por js/pages/curso-dinamico.js -->
                 </div>
             </div>
         </section>
 
         <aside class="sidebar-card">
             <div class="sidebar-topo">
+                
+                <div class="badge-hole"></div>
                 <p class="sidebar-info">Ficha do curso</p>
-                <p class="sidebar-titulo">Suporte em T.I</p>
+                <p class="sidebar-titulo" id="curso-sidebar-titulo">Carregando...</p>
             </div>
             <div class="sidebar-body">
                 <div class="info-row">
                     <div class="info-icone">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></svg>
+                        <i class="ti ti-clock"></i>
                     </div>
-                    <div class="info-label">Carga horária</div>
-                    <div class="info-label">1 ano</div>
+                    <div>
+                        <p class="info-label">Carga horária</p>
+                        <p class="info-value" id="curso-carga-horaria"></p>
+                    </div>
                 </div>
                 <div class="info-row">
                     <div class="info-icone">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M6 21V9l6-5 6 5v12"></path><path d="M10 21v-6h4v6"></path></svg>
+                        <i class="ti ti-building"></i>
                     </div>
-                    <div class="info-label">Modalidade</div>
-                    <div class="info-label">Presencial</div>
+                    <div>
+                        <p class="info-label">Modalidade</p>
+                        <p class="info-value" id="curso-modalidade"></p>
+                    </div>
                 </div>
                 <div class="info-row">
                     <div class="info-icone">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"></circle><path d="M2.5 20c0-3.6 3-6 6.5-6s6.5 2.4 6.5 6"></path><circle cx="17.5" cy="8.5" r="2.5"></circle><path d="M15.5 14c2.8.3 5 2.5 5 6"></path></svg>
+                        <i class="ti ti-users"></i>
                     </div>
-                    <div class="info-label">Idade</div>
-                    <div class="info-label">14 a 23 anos*</div>
+                    <div>
+                        <p class="info-label">Idade</p>
+                        <p class="info-value" id="curso-idade"></p>
+                    </div>
                 </div>
                 <div class="info-row">
                     <div class="info-icone">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5-10-5z"></path><path d="M6 11v5c0 1.2 2.7 3 6 3s6-1.8 6-3v-5"></path></svg>
+                        <i class="ti ti-school"></i>
                     </div>
-                    <div class="info-label">Escolaridade mínima</div>
-                    <div class="info-label">8º ano do Ensino Fundamental</div>
+                    <div>
+                        <p class="info-label">Escolaridade mínima</p>
+                        <p class="info-value" id="curso-escolaridade"></p>
+                    </div>
                 </div>
-                <p class="info-nota">*Sem limite de idade para pessoas com deficiência</p>
-                <p class="turno-disponivel">Turnos dísponíveis</p>
-                <div class="turno-situacao">
-                    <span class="situacao-badge">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"></circle></svg>
-                        <p>Manhã</p>
-                    </span>
-                    <span class="situacao-badge">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"></circle></svg>
-                        <p>Tarde</p>
-                    </span>
+                <div class="info-row">
+                    <div class="info-icone">
+                        <i class="ti ti-sun"></i>
+                    </div>
+                    <div>
+                        <p class="info-label">Turnos</p>
+                        <p class="info-value" id="curso-turnos"></p>
+                    </div>
                 </div>
-                <a href="#inscreva-se" class="ver-detalhes">Inscreva-se agora</a>
+                <p class="info-nota" id="curso-nota-pcd"></p>
+                <a href="#inscreva-se" class="btn-sidebar">Inscreva-se agora</a>
                 <p class="cta-sub">Vagas limitadas · Formação gratuita</p>
             </div>
         </aside>
 
-         </main>
-
+    </main>
+        <site-voltar></site-voltar>    
+    
         <site-footer></site-footer>
 
+        <site-modal></site-modal>
 </body>
 </html>
