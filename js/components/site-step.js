@@ -2,7 +2,7 @@ class SiteStep extends HTMLElement {
     connectedCallback() {
         this.innerHTML =
         `
-        <aside>
+        <aside class="step-section">
         <div class="step-body">
             <h2 class="step-titulo">Como se inscrever</h2>
             <p class="step-paragraphy">Processo simples, sem burocracia</p>
