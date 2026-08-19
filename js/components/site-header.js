@@ -17,17 +17,17 @@ class SiteHeader extends HTMLElement {
             </div>
 
             <nav class="navbar">
-                <a class="logo" href="#"><img src="assets/images/logo-pao-dos-pobres.png" alt="Logo Fundação O Pão dos Pobres"></a>
+                <a class="logo" href="index.html"><img src="assets/images/logo-pao-dos-pobres.png" alt="Logo Fundação O Pão dos Pobres"></a>
                 <button class="mobile-menu" aria-label="Abrir menu" aria-expanded="false">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
                 </button>
                 <ul class="nav-list">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#cursos">Cursos</a></li>
-                    <li><a href="#faq">Faq</a></li>
-                    <li><a class="btn list" href="#inscreva-se">Inscrever-se</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#cursos">Cursos</a></li>
+                    <li><a href="index.html#faq">Faq</a></li>
+                    <li><a class="btn list" href="formulario.html">Inscrever-se</a></li>
                     <!-- <li><a href="https://www.paodospobres.org.br/" target="_blank">Site oficial</a></li> -->
                 </ul>
             </nav>

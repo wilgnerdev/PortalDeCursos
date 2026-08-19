@@ -7,8 +7,13 @@
 @import url(layout/banner.css);
 @import url(layout/sobre.css);
 @import url(layout/grid.css);
+@import url(layout/step.css);
 @import url(layout/form.css);
 @import url(layout/faq.css);
 @import url(layout/footer.css);
+@import url(layout/curso-detalhes.css);
+
 
 @import url(components/modal.css);
+@import url(components/voltar.css);
+@import url(components/link-formulario.css);

@@ -29,7 +29,7 @@
     display: flex;
     flex-direction: column;
     border: 1px solid transparent;
-    background-color: #004a99;
+    background-color: var(--cor-azul-escuro);
     border-radius: 8px;
     padding: 25px;
     width: 250px;
@@ -43,6 +43,50 @@
     color: #fff;
     text-align: center;
 }
+
+.info-section {
+    background-color: var(--cinza-claro);
+    padding: 6rem 0;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.info-grid {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+.info-card {
+    background-color: #fff;
+    padding: 40px;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.fa-solid {
+    color: var(--azul-marinho-profundo);
+    font-size: 58px;
+    margin-bottom: 30px;
+}
+
+.info-card-titulo {
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+.info-card p {
+    line-height: 2rem;
+}
+
+@media(max-width: 768px) {
+    .info-grid {
+        flex-wrap: wrap;
+    }
+}
+
 
 @media(max-width: 709px) {
     .box-card-destaque {

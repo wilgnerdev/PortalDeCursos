@@ -42,7 +42,10 @@
         font-size: 18px;
     }
 
-    .btn-banner {
+}
+
+@media(max-width: 362px) {
+    .btn {
         font-size: 12px;
     }
 }

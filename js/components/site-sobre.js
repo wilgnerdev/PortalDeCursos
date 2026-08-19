@@ -22,6 +22,24 @@ class SiteSobre extends HTMLElement {
             </span>
             </div>
         </section>
+
+        <section class="info-section">
+            <div class="info-grid">
+
+                <div class="info-card">
+                    <i class="fa-solid fa-bullseye"></i>
+                    <h3 class="info-card-titulo">Objetivo</h3>
+                    <p>Proporcionar a formação integral de adolescentes e jovens, visando sua inserção no mundo do trabalho, como cidadãos éticos e profissionais competentes.</p>
+                </div>
+
+                <div class="info-card">
+                    <i class="fa-solid fa-user-group"></i>
+                    <h3 class="info-card-titulo">Público-Alvo</h3>
+                    <p>Adolescentes e jovens entre 14 e 24 anos (sem limite de idade para pessoas com deficiência), de famílias em situação de vulnerabilidade ou risco social.</p>
+                </div>
+                
+            </div>
+        </section>
         `
         ;
     }
