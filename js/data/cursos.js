@@ -24,7 +24,7 @@ export const cursos = [
     fichaTecnica: {
       cargaHoraria: "1 ano",
       modalidade: "Presencial",
-      idade: "14 a 23 anos",
+      idade: "14 a 22 anos",
       escolaridadeMinima: "8º ano do Ensino Fundamental",
       exigeVulnerabilidadeSocial: false
     },
@@ -49,7 +49,7 @@ export const cursos = [
     fichaTecnica: {
       cargaHoraria: "1 ano",
       modalidade: "Presencial",
-      idade: "18 a 23 anos",
+      idade: "18 a 22 anos",
       escolaridadeMinima: "8º ano do Ensino Fundamental",
       exigeVulnerabilidadeSocial: false
     },
@@ -74,7 +74,7 @@ export const cursos = [
     fichaTecnica: {
       cargaHoraria: "1 ano",
       modalidade: "Presencial",
-      idade: "15 a 23 anos",
+      idade: "15 a 22 anos",
       escolaridadeMinima: "7º ano do Ensino Fundamental",
       exigeVulnerabilidadeSocial: true
     },
@@ -99,7 +99,7 @@ export const cursos = [
     fichaTecnica: {
       cargaHoraria: "1 ano",
       modalidade: "Presencial",
-      idade: "16 a 23 anos",
+      idade: "16 a 22 anos",
       escolaridadeMinima: "1º ano do Ensino Médio",
       exigeVulnerabilidadeSocial: true
     },
@@ -124,7 +124,7 @@ export const cursos = [
     fichaTecnica: {
       cargaHoraria: "1 ano",
       modalidade: "Presencial",
-      idade: "17 a 23 anos",
+      idade: "17 a 22 anos",
       escolaridadeMinima: "2º ano do Ensino Médio",
       exigeVulnerabilidadeSocial: true
     },
@@ -148,7 +148,7 @@ export const cursos = [
     fichaTecnica: {
       cargaHoraria: "1 ano",
       modalidade: "Presencial",
-      idade: "17 a 23 anos",
+      idade: "17 a 22 anos",
       escolaridadeMinima: "8º ano do Ensino Fundamental",
       exigeVulnerabilidadeSocial: true
     },
@@ -173,7 +173,7 @@ export const cursos = [
     fichaTecnica: {
       cargaHoraria: "1 ano",
       modalidade: "Presencial",
-      idade: "15 a 23 anos",
+      idade: "15 a 22 anos",
       escolaridadeMinima: "8º ano do Ensino Fundamental",
       exigeVulnerabilidadeSocial: true
     },
@@ -197,7 +197,7 @@ export const cursos = [
     fichaTecnica: {
       cargaHoraria: "1 ano",
       modalidade: "Presencial",
-      idade: "14 a 23 anos",
+      idade: "14 a 22 anos",
       escolaridadeMinima: "7º ano do Ensino Fundamental",
       exigeVulnerabilidadeSocial: true
     },
@@ -221,7 +221,7 @@ export const cursos = [
     fichaTecnica: {
       cargaHoraria: "1 ano",
       modalidade: "Presencial",
-      idade: "18 a 23 anos",
+      idade: "18 a 22 anos",
       escolaridadeMinima: "8º ano do Ensino Fundamental",
       exigeVulnerabilidadeSocial: true
     },
@@ -245,7 +245,7 @@ export const cursos = [
     fichaTecnica: {
       cargaHoraria: "1 ano",
       modalidade: "Presencial",
-      idade: "18 a 23 anos",
+      idade: "18 a 22 anos",
       escolaridadeMinima: "2º ano do Ensino Médio",
       exigeVulnerabilidadeSocial: true
     },
@@ -270,7 +270,7 @@ export const cursos = [
     fichaTecnica: {
       cargaHoraria: "1 ano",
       modalidade: "Presencial",
-      idade: "14 a 23 anos",
+      idade: "14 a 22 anos",
       escolaridadeMinima: "8º ano do Ensino Fundamental",
       exigeVulnerabilidadeSocial: true
     },
@@ -296,7 +296,7 @@ export const cursos = [
     fichaTecnica: {
       cargaHoraria: "1 ano",
       modalidade: "Presencial",
-      idade: "17 a 23 anos",
+      idade: "17 a 22 anos",
       escolaridadeMinima: "2º ano do Ensino Médio",
       exigeVulnerabilidadeSocial: true
     },
