@@ -2,13 +2,13 @@ const cursos = [
     {
         id: "assistente-administrativo",
         titulo: "Assistente Administrativo",
-        img: "foto-adm.webp",
+        img: "adm-12.webp",
         desc: "Gestão de documentos, atendimento e rotinas administrativas empresariais."
     },
     {
         id: "cabeleireiro",
         titulo: "Assistente de Cabeleireiro",
-        img: "cabeleireiro-aluno.jpg",
+        img: "cabeleireiro-aluno.webp",
         desc: "Técnicas de corte, coloração, tratamentos capilares e atendimento em salões."
     },
     {
@@ -20,37 +20,37 @@ const cursos = [
     {
         id: "corte-costura-modelagem",
         titulo: "Corte, Costura e Modelagem Sustentável",
-        img: "costura_aluno.jpg",
+        img: "costura.webp",
         desc: "Confecção de roupas com foco em moda sustentável e técnicas de modelagem."
     },
     {
         id: "desporto",
         titulo: "Desporto",
-        img: "desporto.jpg",
+        img: "desporto.webp",
         desc: "Formação em educação física, esportes e atividades recreativas."
     },
     {
         id: "eletromecanica-elevadores",
         titulo: "Eletromecânica de Elevadores",
-        img: "elevators.jpg",
+        img: "elevadores.webp",
         desc: "Manutenção, operação e segurança de sistemas de elevadores."
     },
     {
         id: "gastronomia",
         titulo: "Gastronomia",
-        img: "gastronomia_pao.jpeg",
+        img: "gastronomia-2.webp",
         desc: "Técnicas culinárias profissionais e preparação de alimentos."
     },
     {
         id: "projetista-moveis",
         titulo: "Projetista de Móveis",
-        img: "projetista.jpg",
+        img: "projetista-2.webp",
         desc: "Planejamento e execução de projetos de móveis e marcenaria."
     },
     {
         id: "refrigeracao-climatizacao",
         titulo: "Refrigeração e Climatização",
-        img: "refrigeracao.jpg",
+        img: "refrigeracao-3.webp",
         desc: "Instalação e manutenção de sistemas de ar condicionado e refrigeração."
     },
     {
@@ -68,7 +68,7 @@ const cursos = [
     {
         id: "mecanica-automotiva",
         titulo: "Mecânica Automotiva",
-        img: "aprendizagem-profissional-mecanica.webp",
+        img: "aprendizagem-profissional-mecanica-4.webp",
         desc: "Manutenção, reparo e diagnóstico de veículos automotores."
     }
 ];
@@ -91,7 +91,7 @@ class SiteGrid extends HTMLElement {
             </div>
             `).join('');
 
-            this.innerHTML = `
+        this.innerHTML = `
             <section class="curso-section">
                 <h2 class="curso-titulo" id="cursos">Cursos disponíveis</h2>
                 <p class="curso-paragrafo">Escolha uma área e conheça os detalhes de cada curso.</p>

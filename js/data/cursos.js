@@ -38,7 +38,7 @@ export const cursos = [
     id: "mecanica-automotiva",
     titulo: "Mecânica Automotiva",
     resumoBanner: "Manutenção, reparo e diagnóstico de veículos automotores.",
-    imagemBanner: "aprendizagem-profissional-mecanica.webp",
+    imagemBanner: "aprendizagem-profissional-mecanica-3.webp",
     sobre: "O jovem aprende a realizar diagnósticos, manutenção preventiva (revisão) e corretiva (reparo) em veículos automotores. Jovens do curso irão realizar prática na empresa.",
     habilidades: [
       { icone: "tool", titulo: "Diagnóstico de falhas veiculares", descricao: "Identificação de problemas mecânicos e elétricos em veículos." },
@@ -63,7 +63,7 @@ export const cursos = [
     id: "corte-costura-modelagem",
     titulo: "Corte, Costura e Modelagem Sustentável",
     resumoBanner: "Confecção de roupas com foco em moda sustentável e técnicas de modelagem.",
-    imagemBanner: "costura_aluno.jpg",
+    imagemBanner: "costura-2.webp",
     sobre: "Oferece formação profissional com conhecimentos e habilidades básicas e específicas ao exercício da função. Ao final do curso, os jovens deverão apresentar competências para organizar o trabalho em etapas, prever recursos, distribuir o tempo, tomar decisões, localizar e selecionar informações, atender procedimentos de segurança e legislação específica, aplicar princípios de preservação ambiental e Gestão pela Qualidade, e trabalhar eficazmente com outras pessoas.",
     habilidades: [
       { icone: "scissors", titulo: "Técnicas de corte e costura", descricao: "Fundamentos práticos do ofício, do tecido à peça pronta." },
@@ -88,7 +88,7 @@ export const cursos = [
     id: "projetista-moveis",
     titulo: "Projetista de Móveis",
     resumoBanner: "Planejamento e execução de projetos de móveis e marcenaria.",
-    imagemBanner: "projetista.jpg",
+    imagemBanner: "projetista-2.webp",
     sobre: "Ao final do curso o aprendiz adquire competências compatíveis com o ofício de Auxiliar de Marcenaria e com as necessidades das empresas, promovendo sua inserção no mercado de trabalho e na sociedade. Também terá noções de como projetar móveis.",
     habilidades: [
       { icone: "ruler-2", titulo: "Fundamentos de marcenaria", descricao: "Técnicas básicas do ofício de Auxiliar de Marcenaria." },
@@ -113,7 +113,7 @@ export const cursos = [
     id: "eletromecanica-elevadores",
     titulo: "Eletromecânica de Elevadores",
     resumoBanner: "Manutenção, operação e segurança de sistemas de elevadores.",
-    imagemBanner: "elevators.jpg",
+    imagemBanner: "elevadores.webp",
     sobre: "Conhecer as tecnologias relacionadas à prestação de serviços de manutenção, troca de peças e assistência técnica. Proporciona experimentações práticas no ambiente de manutenção em equipamentos e reconhece a importância das relações humanas no trabalho, identificando possibilidades e limites da atuação profissional.",
     habilidades: [
       { icone: "elevator", titulo: "Tecnologias de elevadores", descricao: "Fundamentos dos sistemas eletromecânicos de elevação." },
@@ -137,7 +137,7 @@ export const cursos = [
     id: "cabeleireiro",
     titulo: "Assistente de Cabeleireiro",
     resumoBanner: "Técnicas de corte, coloração, tratamentos capilares e atendimento em salões.",
-    imagemBanner: "cabeleireiro-aluno.jpg",
+    imagemBanner: "cabeleireiro-aluno.webp",
     sobre: "Capacita os jovens a atuarem como assistentes em salões de beleza, no tratamento de cabelos. Oferece formação profissional com conhecimentos e habilidades básicas e específicas ao exercício da função.",
     habilidades: [
       { icone: "scissors", titulo: "Tratamento capilar", descricao: "Técnicas básicas de cuidado e tratamento de cabelos." },
@@ -187,7 +187,7 @@ export const cursos = [
     id: "desporto",
     titulo: "Desporto",
     resumoBanner: "Formação em educação física, esportes e atividades recreativas.",
-    imagemBanner: "desporto.jpg",
+    imagemBanner: "desporto.webp",
     sobre: "Oferece um conjunto de experiências teórico-práticas na área do Desporto. Executa as rotinas básicas do processo de trabalho da prática desportiva e reconhece o panorama da prática desportiva no mercado atual.",
     habilidades: [
       { icone: "activity", titulo: "Prática desportiva", descricao: "Rotinas básicas do trabalho na área do desporto." },
@@ -211,7 +211,7 @@ export const cursos = [
     id: "gastronomia",
     titulo: "Gastronomia",
     resumoBanner: "Técnicas culinárias profissionais e preparação de alimentos.",
-    imagemBanner: "gastronomia_pao.jpeg",
+    imagemBanner: "gastronomia-2.webp",
     sobre: "Ensina informações técnicas sobre Gastronomia. Capacita os jovens a desenvolver atividades de rotina do setor de cozinha, atendimento e restaurantes.",
     habilidades: [
       { icone: "chef-hat", titulo: "Técnicas de cozinha", descricao: "Fundamentos técnicos do preparo de alimentos." },
@@ -235,7 +235,7 @@ export const cursos = [
     id: "refrigeracao-climatizacao",
     titulo: "Refrigeração e Climatização",
     resumoBanner: "Instalação e manutenção de sistemas de ar condicionado e refrigeração.",
-    imagemBanner: "refrigeracao.jpg",
+    imagemBanner: "refrigeracao-3.webp",
     sobre: "Prepara os aprendizes para auxiliar os serviços de instalação, reparação e manutenção de máquinas e equipamentos de ar-condicionado em ambientes residenciais, comerciais e industriais.",
     habilidades: [
       { icone: "snowflake", titulo: "Instalação de climatização", descricao: "Auxílio na instalação de equipamentos de ar-condicionado." },
@@ -259,7 +259,7 @@ export const cursos = [
     id: "assistente-administrativo",
     titulo: "Assistente Administrativo",
     resumoBanner: "Gestão de documentos, atendimento e rotinas administrativas empresariais.",
-    imagemBanner: "foto-adm.webp",
+    imagemBanner: "adm-5.webp",
     sobre: "Oferece formação profissional básica voltada ao desenvolvimento de competências técnicas e socioemocionais necessárias ao exercício de atividades administrativas em empresas públicas e privadas. Prepara o jovem para atuar em rotinas de escritório, controle de documentos, atendimento ao público, elaboração de relatórios, apoio em processos de gestão e execução de tarefas relacionadas à administração de recursos materiais e humanos.",
     habilidades: [
       { icone: "file-text", titulo: "Rotinas de escritório", descricao: "Controle de documentos e organização administrativa." },
