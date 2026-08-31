@@ -1,6 +1,6 @@
 // js/pages/curso-dinamico.js
 // Lê o parâmetro ?curso= da URL, busca o curso em cursos.js
-// e injeta os dados no template estático de curso-detalhes.html
+// e injeta os dados no template estático de detalhe do curso
 
 import { getCursoPorId, notaPcD } from "../data/cursos.js";
 
@@ -109,7 +109,7 @@ function exibirCursoNaoEncontrado() {
             <h2 class="secao-titulo">Curso não encontrado</h2>
             <p class="secao-texto" style="max-width: 100%">
                 O link acessado não corresponde a nenhum curso disponível.
-                Volte para a <a href="index.html">página inicial</a> e escolha um curso na lista.
+                Volte para a <a href="/index.html">página inicial</a> e escolha um curso na lista.
             </p>
         </div>
     `;

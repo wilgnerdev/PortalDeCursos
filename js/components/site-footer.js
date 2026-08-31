@@ -6,7 +6,7 @@ class SiteFooter extends HTMLElement {
 
                 <div class="footer-container">
 
-                    <div class="logo-footer"><img src="assets/images/logo-big.png" alt=""></div>
+                    <div class="logo-footer"><img src="/assets/images/logo-big.png" alt=""></div>
 
                     <div class="adress-footer">
                         <h4 class="adress-titulo">Endereço:</h4>
