@@ -17,17 +17,17 @@ class SiteHeader extends HTMLElement {
             </div>
 
             <nav class="navbar">
-                <a class="logo" href="index.html"><img src="assets/images/logo-pao-dos-pobres.png" alt="Logo Fundação O Pão dos Pobres"></a>
+                <a class="logo" href="/index.html"><img src="/assets/images/logo-pao-dos-pobres.png" alt="Logo Fundação O Pão dos Pobres"></a>
                 <button class="mobile-menu" aria-label="Abrir menu" aria-expanded="false">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
                 </button>
                 <ul class="nav-list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#cursos">Cursos</a></li>
-                    <li><a href="index.html#faq">Faq</a></li>
-                    <li><a class="btn list" href="formulario.html">Inscrever-se</a></li>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/index.html#cursos">Cursos</a></li>
+                    <li><a href="/index.html#faq">Faq</a></li>
+                    <li><a class="btn list" href="/pages/formulario.html">Inscrever-se</a></li>
                     <!-- <li><a href="https://www.paodospobres.org.br/" target="_blank">Site oficial</a></li> -->
                 </ul>
             </nav>
@@ -67,11 +67,11 @@ class SiteHeader extends HTMLElement {
             }
 
             handleClick() {
-            const isOpen = this.navList.classList.toggle(this.activeClass);
-            this.mobileMenu.classList.toggle(this.activeClass);
-            this.mobileMenu.setAttribute('aria-expanded', isOpen);
-            this.syncInert();
-            this.animateLinks();
+                const isOpen = this.navList.classList.toggle(this.activeClass);
+                this.mobileMenu.classList.toggle(this.activeClass);
+                this.mobileMenu.setAttribute('aria-expanded', isOpen);
+                this.syncInert();
+                this.animateLinks();
             }
 
             addClickEvent() {
