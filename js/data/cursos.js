@@ -7,6 +7,10 @@
 // Nota geral válida para TODOS os cursos (não duplicar por curso)
 export const notaPcD = "Pessoas com deficiência são bem-vindas e não há limite de idade.";
 
+export const regrasInscricao = {
+    pcdSemLimiteIdade: true
+};
+
 export const cursos = [
   {
     id: "suporte-ti",
@@ -91,7 +95,7 @@ export const cursos = [
     requisitos: {
     idadeMinima: 15,
     idadeMaxima: 22,
-    escolaridadeMinima: "fund-8"
+    escolaridadeMinima: "fund-7"
     },
     turnos: [
       { turno: "Manhã", observacao: "" },
@@ -121,7 +125,7 @@ export const cursos = [
     requisitos: {
     idadeMinima: 16,
     idadeMaxima: 22,
-    escolaridadeMinima: "fund-8"
+    escolaridadeMinima: "medio-1"
     },
     turnos: [
       { turno: "Manhã", observacao: "" },
@@ -151,7 +155,7 @@ export const cursos = [
     requisitos: {
     idadeMinima: 17,
     idadeMaxima: 22,
-    escolaridadeMinima: "fund-8"
+    escolaridadeMinima: "medio-2"
     },
     turnos: [
       { turno: "Tarde", observacao: "" }
@@ -204,10 +208,13 @@ export const cursos = [
       cargaHoraria: "1 ano",
       modalidade: "Presencial",
       idade: "15 a 22 anos",
-      idadeMinima: 15,
-      idadeMaxima: 22,
       escolaridadeMinima: "8º ano do Ensino Fundamental",
       exigeVulnerabilidadeSocial: true
+    },
+    requisitos: {
+    idadeMinima: 15,
+    idadeMaxima: 22,
+    escolaridadeMinima: "fund-8"
     },
     turnos: [
       { turno: "Manhã", observacao: "" },
@@ -230,10 +237,13 @@ export const cursos = [
       cargaHoraria: "1 ano",
       modalidade: "Presencial",
       idade: "14 a 22 anos",
-      idadeMinima: 14,
-      idadeMaxima: 22,
       escolaridadeMinima: "7º ano do Ensino Fundamental",
       exigeVulnerabilidadeSocial: true
+    },
+    requisitos: {
+    idadeMinima: 14,
+    idadeMaxima: 22,
+    escolaridadeMinima: "fund-7"
     },
     turnos: [
       { turno: "Manhã", observacao: "" },
@@ -256,10 +266,13 @@ export const cursos = [
       cargaHoraria: "1 ano",
       modalidade: "Presencial",
       idade: "18 a 22 anos",
-      idadeMinima: 18,
-      idadeMaxima: 22,
       escolaridadeMinima: "8º ano do Ensino Fundamental",
       exigeVulnerabilidadeSocial: true
+    },
+    requisitos: {
+    idadeMinima: 18,
+    idadeMaxima: 22,
+    escolaridadeMinima: "fund-8"
     },
     turnos: [
       { turno: "Manhã", observacao: "" },
@@ -282,10 +295,13 @@ export const cursos = [
       cargaHoraria: "1 ano",
       modalidade: "Presencial",
       idade: "18 a 22 anos",
-      idadeMinima: 18,
-      idadeMaxima: 22,
       escolaridadeMinima: "2º ano do Ensino Médio",
       exigeVulnerabilidadeSocial: true
+    },
+    requisitos: {
+    idadeMinima: 18,
+    idadeMaxima: 22,
+    escolaridadeMinima: "medio-2"
     },
     turnos: [
       { turno: "Manhã", observacao: "" },
@@ -309,10 +325,13 @@ export const cursos = [
       cargaHoraria: "1 ano",
       modalidade: "Presencial",
       idade: "14 a 22 anos",
-      idadeMinima: 14,
-      idadeMaxima: 22, 
       escolaridadeMinima: "8º ano do Ensino Fundamental",
       exigeVulnerabilidadeSocial: true
+    },
+    requisitos: {
+    idadeMinima: 14,
+    idadeMaxima: 22,
+    escolaridadeMinima: "fund-8"
     },
     turnos: [
       { turno: "Manhã", observacao: "" },
@@ -337,10 +356,13 @@ export const cursos = [
       cargaHoraria: "1 ano",
       modalidade: "Presencial",
       idade: "17 a 22 anos",
-      idadeMinima: 17,
-      idadeMaxima: 22,
       escolaridadeMinima: "2º ano do Ensino Médio",
       exigeVulnerabilidadeSocial: true
+    },
+    requisitos: {
+    idadeMinima: 17,
+    idadeMaxima: 22,
+    escolaridadeMinima: "medio-2"
     },
     turnos: [
       { turno: "Tarde", observacao: "" }
@@ -349,13 +371,14 @@ export const cursos = [
 ];
 
 export const escolaridades = {
-    "fund-8": 1,
-    "fund-9": 2,
-    "medio-1": 3,
-    "medio-2": 4,
-    "medio-3": 5,
-    "medio-completo": 6,
-    "superior-cursando": 7
+    "fund-7": 1,
+    "fund-8": 2,
+    "fund-9": 3,
+    "medio-1": 4,
+    "medio-2": 5,
+    "medio-3": 6,
+    "medio-completo": 7,
+    "superior-cursando": 8
 };
 
 // Helper de busca — usado pelo template dinâmico via ?curso=<id> na URL
