@@ -41,11 +41,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const dataNascimento = document.getElementById("data-nascimento");
     const idadeCalculada = document.getElementById("idade-calculada");
+
     const escolaridade = document.getElementById("escolaridade");
     const frequenciaEscolar = document.getElementById("frequencia-escolar");
+
     const acolhimento = document.querySelectorAll('input[name="acolhimento"]');
-    const campoAcolhimentoQual = document.getElementById("acolhimento-qual");
+     const campoAcolhimentoQual = document.getElementById("acolhimento-qual");
     const containerAcolhimento = campoAcolhimentoQual.closest(".campo-condicional");
+
+    const deficiencia = document.querySelectorAll('input[name="deficiencia"]');
+    const campoDeficienciaQual = document.getElementById("deficiencia-qual");
+    const containerDeficiencia = campoDeficienciaQual.closest(".campo-condicional");
+
+function atualizarCampoDeficiencia() {
+
+    const opcaoSelecionada =
+        document.querySelector(
+            'input[name="deficiencia"]:checked'
+        );
+
+    const possuiDeficiencia =
+        opcaoSelecionada?.value === "sim";
+
+    containerDeficiencia.classList.toggle(
+        "oculto",
+        !possuiDeficiencia
+    );
+
+    campoDeficienciaQual.required =
+        possuiDeficiencia;
+
+    if (!possuiDeficiencia) {
+        campoDeficienciaQual.value = "";
+    }
+}
+
+deficiencia.forEach(opcao => {
+    opcao.addEventListener(
+        "change",
+        atualizarCampoDeficiencia
+    );
+});
+
+atualizarCampoDeficiencia();
 
 function atualizarCampoAcolhimento() {
 
