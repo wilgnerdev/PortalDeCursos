@@ -33,7 +33,6 @@ function limparErro(campo) {
     erro.style.display = "none";
 }
 
-
 document.addEventListener("DOMContentLoaded", () => {
 
     const formulario = document.getElementById("formCadastro");
@@ -43,6 +42,40 @@ document.addEventListener("DOMContentLoaded", () => {
     const dataNascimento = document.getElementById("data-nascimento");
     const idadeCalculada = document.getElementById("idade-calculada");
     const escolaridade = document.getElementById("escolaridade");
+
+    
+function atualizarCampoFrequencia() {
+    const containerFrequencia =
+        document.getElementById("container-frequencia");
+
+    const campoFrequencia =
+        document.getElementById("frequencia-escolar");
+
+    const escolaridadesQueEstudam = [
+        "fund-7",
+        "fund-8",
+        "fund-9",
+        "medio-1",
+        "medio-2",
+        "medio-3"
+    ];
+
+    const estuda =
+        escolaridadesQueEstudam.includes(escolaridade.value);
+
+    containerFrequencia.classList.toggle("oculto", !estuda);
+
+    campoFrequencia.required = estuda;
+
+    if (!estuda) {
+        campoFrequencia.value = "";
+    }
+    
+}
+
+    escolaridade.addEventListener("change", atualizarCampoFrequencia);
+
+    atualizarCampoFrequencia();
 
 
     // Calcula a idade
