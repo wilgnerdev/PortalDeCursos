@@ -43,6 +43,38 @@ document.addEventListener("DOMContentLoaded", () => {
     const idadeCalculada = document.getElementById("idade-calculada");
     const escolaridade = document.getElementById("escolaridade");
     const frequenciaEscolar = document.getElementById("frequencia-escolar");
+    const acolhimento = document.querySelectorAll('input[name="acolhimento"]');
+    const campoAcolhimentoQual = document.getElementById("acolhimento-qual");
+    const containerAcolhimento = campoAcolhimentoQual.closest(".campo-condicional");
+
+function atualizarCampoAcolhimento() {
+
+    const opcaoSelecionada =
+        document.querySelector('input[name="acolhimento"]:checked');
+
+    const acolhido =
+        opcaoSelecionada?.value === "sim";
+
+    containerAcolhimento.classList.toggle(
+        "oculto",
+        !acolhido
+    );
+
+    campoAcolhimentoQual.required = acolhido;
+
+    if (!acolhido) {
+        campoAcolhimentoQual.value = "";
+    }
+}
+
+    acolhimento.forEach(opcao => {
+    opcao.addEventListener(
+        "change",
+        atualizarCampoAcolhimento
+    );
+});
+
+atualizarCampoAcolhimento();
 
     
 function atualizarCampoFrequencia() {
