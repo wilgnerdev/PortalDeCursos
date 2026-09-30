@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const dataNascimento = document.getElementById("data-nascimento");
     const idadeCalculada = document.getElementById("idade-calculada");
     const escolaridade = document.getElementById("escolaridade");
+    const frequenciaEscolar = document.getElementById("frequencia-escolar");
 
     
 function atualizarCampoFrequencia() {
@@ -60,8 +61,7 @@ function atualizarCampoFrequencia() {
         "medio-3"
     ];
 
-    const estuda =
-        escolaridadesQueEstudam.includes(escolaridade.value);
+    const estuda = escolaridadesQueEstudam.includes(escolaridade.value);
 
     containerFrequencia.classList.toggle("oculto", !estuda);
 
@@ -99,35 +99,38 @@ function atualizarCampoFrequencia() {
         limparErro("escolaridade");
     });
 
+    frequenciaEscolar.addEventListener("input", () => {
+    limparErro("frequencia-escolar");
+    });
+
 
     // Envio do formulário
     formulario.addEventListener("submit", (evento) => {
 
         evento.preventDefault();
 
-        const cursoId =
-            document.getElementById("select-cursos").value;
+        const cursoId = document.getElementById("select-cursos").value;
 
-        const escolaridadeSelecionada =
-            document.getElementById("escolaridade").value;
+        const escolaridadeSelecionada = document.getElementById("escolaridade").value;
 
         const deficienciaSelecionada =
             document.querySelector(
                 'input[name="deficiencia"]:checked'
-            );
+        );
 
-        const pcd =
-            deficienciaSelecionada?.value === "sim";
+        const pcd = deficienciaSelecionada?.value === "sim";
 
-        const idade =
-            calcularIdade(dataNascimento.value);
+        const idade = calcularIdade(dataNascimento.value);
+
+        const frequencia = Number(frequenciaEscolar.value);
 
 
         const resultado = validarCandidato({
             cursoId,
             idade,
             escolaridade: escolaridadeSelecionada,
-            pcd
+            pcd,
+            frequencia
         });
 
 
@@ -155,6 +158,13 @@ function atualizarCampoFrequencia() {
                     resultado.mensagem
                 );
 
+            }
+
+               if (resultado.motivo === "frequencia") {
+                mostrarErro(
+                    "frequencia-escolar",
+                    resultado.mensagem
+                );
             }
 
             return;

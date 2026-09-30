@@ -22,7 +22,7 @@ export function calcularIdade(dataNascimento) {
     return idade;
 }
 
-export function validarCandidato({ cursoId, idade, escolaridade, pcd }) {
+export function validarCandidato({ cursoId, idade, escolaridade, pcd, frequencia }) {
     const curso = cursos.find(curso => curso.id === cursoId);
 
     if (!curso) {
@@ -32,6 +32,17 @@ export function validarCandidato({ cursoId, idade, escolaridade, pcd }) {
             mensagem: "Curso não encontrado."
         };
     }
+
+    const escolaridadesQueEstudam = [
+    "fund-7",
+    "fund-8",
+    "fund-9",
+    "medio-1",
+    "medio-2",
+    "medio-3"
+    ];
+
+    const estuda = escolaridadesQueEstudam.includes(escolaridade);
 
     const requisitos = curso.requisitos;
 
@@ -79,9 +90,20 @@ export function validarCandidato({ cursoId, idade, escolaridade, pcd }) {
         };
     }
 
+    // Frequência escolar mínima
+    if (estuda && frequencia < 75) {
+        return {
+            valido: false,
+            motivo: "frequencia",
+            mensagem: "Sua frequência escolar deve ser de no mínimo 75% para se inscrever neste curso."
+        };
+    }
+
     return {
         valido: true,
         motivo: null,
         mensagem: "Candidato atende aos requisitos do curso."
     };
+
 }
+

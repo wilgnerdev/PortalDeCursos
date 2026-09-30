@@ -200,8 +200,21 @@
                      <!-- Condicional: só faz sentido perguntar frequência pra quem estuda -->
                     <div class="campo-condicional oculto" id="container-frequencia" data-condicional-de="turno-escola" data-esconder-quando="nao-estudo">
                         <label for="frequencia-escolar">Qual a porcentagem da sua frequência escolar?</label>
+                        
                         <P class="campo-ajuda">Só são aceitos jovens com frequência acima de 75%</P>
-                        <input type="number" id="frequencia-escolar" name="frequenciaEscolar" min="0" max="100" step="1" placeholder="Ex: 85" oninput="if(this.value.length > 3) this.value = this.value.slice(0, 3);">
+
+                        <input type="number"
+                        id="frequencia-escolar" 
+                        name="frequenciaEscolar" 
+                        min="0" max="100" step="1" 
+                        placeholder="Ex: 85" 
+                        oninput="if(this.value.length > 3) this.value = this.value.slice(0, 3);"
+                        >
+                        
+                        <div
+                            id="erro-frequencia-escolar"
+                            class="mensagem-validacao"
+                        ></div>
                     </div>
 
                     <label for="turno-escola">Qual turno você vai para a escola?</label>
