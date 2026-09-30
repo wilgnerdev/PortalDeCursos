@@ -76,6 +76,15 @@
     width: 200px;
 }
 
+.mensagem-validacao {
+    display: none;
+    margin-top: 8px;
+    padding: 10px 0;
+    border-radius: 6px;
+    color: var(--alerta);
+    font-weight: 600;
+}
+
 select, select, textarea {
     padding: 15px;
     border-radius: 8px;

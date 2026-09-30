@@ -49,18 +49,18 @@
                             <label for="select-cursos">Selecione um curso</label>
                             <select id="select-cursos" name="curso" required>
                                 <option value="">Selecione um curso</option>
-                                <option value="adm">Assistente Administrativo</option>
-                                <option value="cabelo">Assistente de Cabeleireiro</option>
-                                <option value="desenvolvimento">Desenvolvimento Web</option>
-                                <option value="costura">Corte, Costura e Modelagem Sustentável</option>
+                                <option value="assistente-administrativo">Assistente Administrativo</option>
+                                <option value="cabeleireiro">Assistente de Cabeleireiro</option>
+                                <option value="desenvolvimento-web">Desenvolvimento Web</option>
+                                <option value="corte-costura-modelagem">Corte, Costura e Modelagem Sustentável</option>
                                 <option value="desporto">Desporto</option>
-                                <option value="elevadores">Eletromecânica de Elevadores</option>
-                                <option value="gastro">Gastronomia</option>
-                                <option value="mecanica">Mecânica Automotiva</option>
-                                <option value="projetista">Projetista de Móveis</option>
-                                <option value="refrigeracao">Refrigeração e Climatização</option>
-                                <option value="ti">Suporte em T.I</option>
-                                <option value="vendas">Vendas e Atendimento ao Cliente</option>
+                                <option value="eletromecanica-elevadores">Eletromecânica de Elevadores</option>
+                                <option value="gastronomia">Gastronomia</option>
+                                <option value="mecanica-automotiva">Mecânica Automotiva</option>
+                                <option value="projetista-moveis">Projetista de Móveis</option>
+                                <option value="refrigeracao-climatizacao">Refrigeração e Climatização</option>
+                                <option value="suporte-ti">Suporte em T.I</option>
+                                <option value="vendas-atendimento">Vendas e Atendimento ao Cliente</option>
                             </select>
                         </div>
 
@@ -104,6 +104,9 @@
                         <div class="campo-largo idade">
                             <label for="data-nascimento">Data de Nascimento</label>
                             <input type="date" id="data-nascimento" name="dataNascimento" autocomplete="bday" required>
+
+                            <div id="erro-data-nascimento" class="mensagem-validacao">
+                            </div>
                         </div>
 
                         <div class="campo-curto idade">

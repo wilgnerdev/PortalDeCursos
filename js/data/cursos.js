@@ -378,7 +378,8 @@ export const escolaridades = {
     "medio-2": 5,
     "medio-3": 6,
     "medio-completo": 7,
-    "superior-cursando": 8
+    "nao-estudando": 8,
+    "superior-cursando": 9
 };
 
 // Helper de busca — usado pelo template dinâmico via ?curso=<id> na URL

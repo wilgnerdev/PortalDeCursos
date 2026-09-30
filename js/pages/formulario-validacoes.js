@@ -1,9 +1,30 @@
 import { cursos, escolaridades, regrasInscricao } from "../data/cursos.js";
 
+export function calcularIdade(dataNascimento) {
+    const [ano, mes, dia] = dataNascimento.split("-").map(Number);
+
+    const hoje = new Date();
+    const nascimento = new Date(ano, mes - 1, dia);
+
+    let idade = hoje.getFullYear() - nascimento.getFullYear();
+
+    const aniversarioAindaNaoChegou =
+        hoje.getMonth() < nascimento.getMonth() ||
+        (
+            hoje.getMonth() === nascimento.getMonth() &&
+            hoje.getDate() < nascimento.getDate()
+        );
+
+    if (aniversarioAindaNaoChegou) {
+        idade--;
+    }
+
+    return idade;
+}
+
 export function validarCandidato({ cursoId, idade, escolaridade, pcd }) {
     const curso = cursos.find(curso => curso.id === cursoId);
 
-    // Curso não encontrado
     if (!curso) {
         return {
             valido: false,
@@ -14,7 +35,7 @@ export function validarCandidato({ cursoId, idade, escolaridade, pcd }) {
 
     const requisitos = curso.requisitos;
 
-    // Verifica idade mínima
+    // Idade mínima
     if (idade < requisitos.idadeMinima) {
         return {
             valido: false,
@@ -23,7 +44,7 @@ export function validarCandidato({ cursoId, idade, escolaridade, pcd }) {
         };
     }
 
-    // Verifica idade máxima
+    // Idade máxima
     // PCD não possui limite máximo de idade
     if (
         !pcd &&
@@ -37,7 +58,7 @@ export function validarCandidato({ cursoId, idade, escolaridade, pcd }) {
         };
     }
 
-    // Verifica se a escolaridade informada existe
+    // Escolaridade existe no nosso mapa?
     if (!(escolaridade in escolaridades)) {
         return {
             valido: false,
@@ -46,7 +67,7 @@ export function validarCandidato({ cursoId, idade, escolaridade, pcd }) {
         };
     }
 
-    // Verifica se a escolaridade atende ao requisito do curso
+    // Escolaridade mínima
     if (
         escolaridades[escolaridade] <
         escolaridades[requisitos.escolaridadeMinima]
@@ -64,10 +85,3 @@ export function validarCandidato({ cursoId, idade, escolaridade, pcd }) {
         mensagem: "Candidato atende aos requisitos do curso."
     };
 }
-console.log(validarCandidato({
-    cursoId: "refrigeracao-climatizacao",
-    idade: '17',
-    escolaridade: "medio-2",
-    pcd: true
-})
-)
