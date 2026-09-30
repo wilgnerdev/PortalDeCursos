@@ -113,7 +113,7 @@
                             <label for="idade-calculada">Idade</label>
                             <!-- Preenchido via JS a partir de data-nascimento. readonly = usuário não digita, só visualiza. -->
                             <input type="text" id="idade-calculada" name="idadeCalculada" readonly placeholder="--" aria-describedby="idade-hint">
-                            <small id="idade-hint" class="campo-ajuda idade">Calculada automaticamente</small>
+                            <P id="idade-hint" class="campo-ajuda idade">Calculada automaticamente</P>
                         </div>
                     </div>
 
@@ -170,7 +170,7 @@
                     </div>
 
                     <label for="onibus">Qual ônibus você utiliza para chegar até a Fundação?</label>
-                    <small class="campo-ajuda">Local de curso: Rua República, 801 - Cidade Baixa, Porto Alegre</small>
+                    <P class="campo-ajuda">Local de curso: Rua República, 801 - Cidade Baixa, Porto Alegre</P>
                     <input type="text" id="onibus" name="onibus" placeholder="Ex: 265, T4, a pé..." required>
                 </fieldset>
 
@@ -192,6 +192,11 @@
                         <option value="superior-cursando">Ensino Superior - Cursando</option>
                     </select>
 
+                    <div
+                        id="erro-escolaridade"
+                        class="mensagem-validacao">
+                    </div>
+
                     <label for="turno-escola">Qual turno você vai para a escola?</label>
                     <select id="turno-escola" name="turnoEscola" required>
                         <option value="">Selecione</option>
@@ -204,7 +209,7 @@
                     <!-- Condicional: só faz sentido perguntar frequência pra quem estuda -->
                     <div class="campo-condicional" data-condicional-de="turno-escola" data-esconder-quando="nao-estudo">
                         <label for="frequencia-escolar">Qual a porcentagem da sua frequência escolar?</label>
-                        <small class="campo-ajuda">Só são aceitos jovens com frequência acima de 75%</small>
+                        <P class="campo-ajuda">Só são aceitos jovens com frequência acima de 75%</P>
                         <input type="number" id="frequencia-escolar" name="frequenciaEscolar" min="0" max="100" step="1" placeholder="Ex: 85" oninput="if(this.value.length > 3) this.value = this.value.slice(0, 3);" required>
                     </div>
                 </fieldset>

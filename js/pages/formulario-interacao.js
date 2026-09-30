@@ -42,9 +42,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const dataNascimento = document.getElementById("data-nascimento");
     const idadeCalculada = document.getElementById("idade-calculada");
+    const escolaridade = document.getElementById("escolaridade");
 
 
-    // Calcula a idade quando a data de nascimento é alterada
+    // Calcula a idade
     dataNascimento.addEventListener("change", () => {
 
         limparErro("data-nascimento");
@@ -60,47 +61,73 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    // Validação no envio do formulário
+    // Limpa o erro de escolaridade quando ela for alterada
+    escolaridade.addEventListener("change", () => {
+        limparErro("escolaridade");
+    });
+
+
+    // Envio do formulário
     formulario.addEventListener("submit", (evento) => {
 
         evento.preventDefault();
 
-        const cursoId = document.getElementById("select-cursos").value;
-        const escolaridade = document.getElementById("escolaridade").value;
+        const cursoId =
+            document.getElementById("select-cursos").value;
+
+        const escolaridadeSelecionada =
+            document.getElementById("escolaridade").value;
 
         const deficienciaSelecionada =
-            document.querySelector('input[name="deficiencia"]:checked');
+            document.querySelector(
+                'input[name="deficiencia"]:checked'
+            );
 
-        const pcd = deficienciaSelecionada?.value === "sim";
+        const pcd =
+            deficienciaSelecionada?.value === "sim";
 
-        const idade = calcularIdade(dataNascimento.value);
+        const idade =
+            calcularIdade(dataNascimento.value);
+
 
         const resultado = validarCandidato({
             cursoId,
             idade,
-            escolaridade,
+            escolaridade: escolaridadeSelecionada,
             pcd
         });
 
 
-        // Candidato não atende aos requisitos
         if (!resultado.valido) {
 
             if (
                 resultado.motivo === "idade-minima" ||
                 resultado.motivo === "idade-maxima"
             ) {
+
                 mostrarErro(
                     "data-nascimento",
                     resultado.mensagem
                 );
+
+            }
+
+            if (
+                resultado.motivo === "escolaridade" ||
+                resultado.motivo === "escolaridade-invalida"
+            ) {
+
+                mostrarErro(
+                    "escolaridade",
+                    resultado.mensagem
+                );
+
             }
 
             return;
         }
 
 
-        // Candidato atende aos requisitos
         caixa.style.display = "block";
 
         formulario.reset();

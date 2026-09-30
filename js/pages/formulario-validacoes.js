@@ -40,7 +40,7 @@ export function validarCandidato({ cursoId, idade, escolaridade, pcd }) {
         return {
             valido: false,
             motivo: "idade-minima",
-            mensagem: `A idade mínima para o curso é ${requisitos.idadeMinima} anos.`
+            mensagem: `A idade mínima para o curso de ${curso.titulo} é ${requisitos.idadeMinima} anos.`
         };
     }
 
@@ -54,7 +54,7 @@ export function validarCandidato({ cursoId, idade, escolaridade, pcd }) {
         return {
             valido: false,
             motivo: "idade-maxima",
-            mensagem: `A idade máxima para o curso é ${requisitos.idadeMaxima} anos.`
+            mensagem: `A idade máxima para o curso de ${curso.titulo} é ${requisitos.idadeMaxima} anos.`
         };
     }
 
