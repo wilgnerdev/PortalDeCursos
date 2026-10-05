@@ -80,7 +80,7 @@ export function validarCandidato({ cursoId, idade, escolaridade, pcd, frequencia
     }
 
     // Escolaridade existe no nosso mapa?
-    if (!(escolaridade in escolaridades)) {
+    if (!Object.hasOwn(escolaridades, escolaridade)) {
         return {
             valido: false,
             motivo: "escolaridade-invalida",
@@ -100,7 +100,16 @@ export function validarCandidato({ cursoId, idade, escolaridade, pcd, frequencia
         };
     }
 
-    // Frequência escolar mínima
+    // Frequência escolar mínima e válida
+
+    if (estuda && frequencia === null) {
+        return {
+            valido: false,
+            motivo: "frequencia",
+            mensagem: "Campo obrigatório!"
+        };
+    }
+
     if (estuda && frequencia < 75) {
         return {
             valido: false,

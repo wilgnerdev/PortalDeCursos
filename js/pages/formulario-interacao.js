@@ -192,7 +192,9 @@ function atualizarCampoFrequencia() {
 
         const idade = calcularIdade(dataNascimento.value);
 
-        const frequencia = Number(frequenciaEscolar.value);
+        const valorTexto = frequenciaEscolar.value.trim();
+ 
+        const frequencia = valorTexto === "" ? null : Number(valorTexto);
 
 
         const resultado = validarCandidato({
