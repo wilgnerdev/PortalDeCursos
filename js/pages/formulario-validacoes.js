@@ -25,6 +25,15 @@ export function calcularIdade(dataNascimento) {
 export function validarCandidato({ cursoId, idade, escolaridade, pcd, frequencia }) {
     const curso = cursos.find(curso => curso.id === cursoId);
 
+    // dataNascimento vazia ou inválida produz NaN em calcularIdade
+    if(Number.isNaN(idade)) {
+        return {
+            valido: false,
+            motivo: "data-nascimento",
+            mensagem: "Idade inválida ou não informada."
+        }
+    }
+
     if (!curso) {
         return {
             valido: false,
@@ -57,9 +66,10 @@ export function validarCandidato({ cursoId, idade, escolaridade, pcd, frequencia
 
     // Idade máxima
     // PCD não possui limite máximo de idade
+    const semLimiteDeIdade = pcd && regrasInscricao.pcdSemLimiteIdade;
+
     if (
-        !pcd &&
-        regrasInscricao.pcdSemLimiteIdade &&
+        !semLimiteDeIdade &&
         idade > requisitos.idadeMaxima
     ) {
         return {
@@ -106,4 +116,3 @@ export function validarCandidato({ cursoId, idade, escolaridade, pcd, frequencia
     };
 
 }
-
