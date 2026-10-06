@@ -179,6 +179,10 @@ function atualizarCampoFrequencia() {
 
         evento.preventDefault();
 
+        limparErro("data-nascimento");
+        limparErro("escolaridade");
+        limparErro("frequencia-escolar");
+
         const cursoId = document.getElementById("select-cursos").value;
 
         const escolaridadeSelecionada = document.getElementById("escolaridade").value;
@@ -247,6 +251,10 @@ function atualizarCampoFrequencia() {
 
         formulario.reset();
         idadeCalculada.value = "";
+
+        atualizarCampoFrequencia();
+        atualizarCampoAcolhimento();
+        atualizarCampoDeficiencia();
     });
 
 
