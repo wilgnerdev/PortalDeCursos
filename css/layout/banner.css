@@ -14,7 +14,7 @@
 
 .banner-title {
     color: #fff;
-    font-size: 50px;
+    font-size: clamp(1rem, 5vw, 3rem);
     font-weight: 900;
     text-transform: uppercase;
     line-height: 1;
@@ -28,21 +28,21 @@
         height: 60vh;
     }
 
-    .banner-title {
+    /* .banner-title {
         font-size: 24px;
-    }
+    } */
 
     .texto-banner-destaque {
         max-width: 100%;
     }
 }
 
-@media(max-width: 466px) {
+/* @media(max-width: 466px) {
     .banner-title {
         font-size: 18px;
     }
 
-}
+} */
 
 @media(max-width: 362px) {
     .btn {
