@@ -26,7 +26,7 @@ class SiteHeader extends HTMLElement {
                 <ul class="nav-list">
                     <li><a href="/index.html">Home</a></li>
                     <li><a href="/index.html#cursos">Cursos</a></li>
-                    <li><a href="/index.html#faq">Faq</a></li>
+                    <li><a href="../../pages/faq.html">Faq</a></li>
                     <li><a class="btn list" href="/pages/formulario.html">Inscrever-se</a></li>
                     <!-- <li><a href="https://www.paodospobres.org.br/" target="_blank">Site oficial</a></li> -->
                 </ul>
