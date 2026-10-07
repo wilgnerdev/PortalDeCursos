@@ -11,7 +11,6 @@
 }
 
 .voltar-titulo {
-    font-size: clamp(1.4rem, 7vw, 2rem);
     color: var(--azul-pao);
     text-align: center;
     margin-bottom: 30px;

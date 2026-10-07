@@ -9,7 +9,6 @@
 }
 
 .step-titulo {
-    font-size: clamp(2rem, 5vw, 2.5rem);
     color: #fff;
     margin-bottom: 15px;
 }

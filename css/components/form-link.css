@@ -9,10 +9,10 @@
     margin: 0 auto;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .link-formulario-titulo {
-    font-size: clamp(1.5rem, 5vw, 2rem);
     color: var(--azul-pao);    
     margin-bottom: 15px;
 }

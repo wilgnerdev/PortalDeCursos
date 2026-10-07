@@ -7,7 +7,6 @@
 
 .titulo__form {
     color: var(--azul-claro);
-    font-size: 38px;
     text-align: center;
 }
 
@@ -145,7 +144,7 @@ textarea {
     border: none;
     cursor: pointer;
     color: var(--branco-puro);
-    font-size: 18px;
+    font-size: clamp(0.9rem, 3vw, 1.2rem);
     text-transform: uppercase;
     font-weight: bold;
     transition: 0.5s;
@@ -179,9 +178,5 @@ textarea {
 
     .periodo {
         width: 100%;
-    }
-    
-    .titulo__form {
-        font-size: 28px;
     }
 }
