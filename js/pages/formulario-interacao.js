@@ -40,6 +40,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const fecharModal = document.getElementById("fecharModal");
 
     const dataNascimento = document.getElementById("data-nascimento");
+    const hoje = new Date();
+    const ano = hoje.getFullYear();
+    const mes = String(hoje.getMonth() + 1).padStart(2, "0");
+    const dia = String(hoje.getDate()).padStart(2, "0");
+    dataNascimento.max = `${ano}-${mes}-${dia}`;
+
     const idadeCalculada = document.getElementById("idade-calculada");
 
     const escolaridade = document.getElementById("escolaridade");
@@ -182,6 +188,7 @@ function atualizarCampoFrequencia() {
         limparErro("data-nascimento");
         limparErro("escolaridade");
         limparErro("frequencia-escolar");
+        limparErro("select-cursos");
 
         const cursoId = document.getElementById("select-cursos").value;
 
@@ -239,6 +246,13 @@ function atualizarCampoFrequencia() {
                if (resultado.motivo === "frequencia") {
                 mostrarErro(
                     "frequencia-escolar",
+                    resultado.mensagem
+                );
+            }
+
+                if (resultado.motivo === "curso") {
+                mostrarErro(
+                    "select-cursos", 
                     resultado.mensagem
                 );
             }
