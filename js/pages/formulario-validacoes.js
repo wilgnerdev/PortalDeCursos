@@ -25,6 +25,15 @@ export function calcularIdade(dataNascimento) {
 export function validarCandidato({ cursoId, idade, escolaridade, pcd, frequencia }) {
     const curso = cursos.find(curso => curso.id === cursoId);
 
+    // dataNascimento vazia ou inválida produz NaN em calcularIdade
+    if(Number.isNaN(idade)) {
+        return {
+            valido: false,
+            motivo: "data-nascimento",
+            mensagem: "Idade inválida ou não informada."
+        }
+    }
+
     if (!curso) {
         return {
             valido: false,
@@ -57,9 +66,10 @@ export function validarCandidato({ cursoId, idade, escolaridade, pcd, frequencia
 
     // Idade máxima
     // PCD não possui limite máximo de idade
+    const semLimiteDeIdade = pcd && regrasInscricao.pcdSemLimiteIdade;
+
     if (
-        !pcd &&
-        regrasInscricao.pcdSemLimiteIdade &&
+        !semLimiteDeIdade &&
         idade > requisitos.idadeMaxima
     ) {
         return {
@@ -70,7 +80,7 @@ export function validarCandidato({ cursoId, idade, escolaridade, pcd, frequencia
     }
 
     // Escolaridade existe no nosso mapa?
-    if (!(escolaridade in escolaridades)) {
+    if (!Object.hasOwn(escolaridades, escolaridade)) {
         return {
             valido: false,
             motivo: "escolaridade-invalida",
@@ -90,7 +100,16 @@ export function validarCandidato({ cursoId, idade, escolaridade, pcd, frequencia
         };
     }
 
-    // Frequência escolar mínima
+    // Frequência escolar mínima e válida
+
+    if (estuda && frequencia === null) {
+        return {
+            valido: false,
+            motivo: "frequencia",
+            mensagem: "Campo obrigatório!"
+        };
+    }
+
     if (estuda && frequencia < 75) {
         return {
             valido: false,
@@ -106,4 +125,3 @@ export function validarCandidato({ cursoId, idade, escolaridade, pcd, frequencia
     };
 
 }
-
