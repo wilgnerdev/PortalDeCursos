@@ -21,7 +21,7 @@ function montarPaginaCurso() {
 }
 
 function preencherTextos(curso) {
-    document.title = `${curso.titulo} - Pão dos Pobres`;
+    document.title = `${curso.titulo} | Pão dos Pobres`;
     document.getElementById("curso-titulo").textContent = curso.titulo;
     document.getElementById("curso-resumo").textContent = curso.resumoBanner;
     document.getElementById("curso-sobre").textContent = curso.sobre;
