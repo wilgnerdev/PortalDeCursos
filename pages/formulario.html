@@ -27,7 +27,6 @@
     <script type="module" src="/js/pages/formulario-interacao.js"></script>
 
     <script type="module" src="/js/components/site-header.js"></script>
-    <script type="module" src="/js/components/site-form.js"></script>
     <script type="module" src="/js/components/site-voltar.js"></script>
     <script type="module" src="/js/components/site-footer.js"></script>
     <script type="module" src="/js/components/site-modal.js"></script>
@@ -50,18 +49,18 @@
                             <label for="select-cursos">Selecione um curso</label>
                             <select id="select-cursos" name="curso" required>
                                 <option value="">Selecione um curso</option>
-                                <option value="adm">Assistente Administrativo</option>
-                                <option value="cabelo">Assistente de Cabeleireiro</option>
-                                <option value="desenvolvimento">Desenvolvimento Web</option>
-                                <option value="costura">Corte, Costura e Modelagem Sustentável</option>
+                                <option value="assistente-administrativo">Assistente Administrativo</option>
+                                <option value="cabeleireiro">Assistente de Cabeleireiro</option>
+                                <option value="desenvolvimento-web">Desenvolvimento Web</option>
+                                <option value="corte-costura-modelagem">Corte, Costura e Modelagem Sustentável</option>
                                 <option value="desporto">Desporto</option>
-                                <option value="elevadores">Eletromecânica de Elevadores</option>
-                                <option value="gastro">Gastronomia</option>
-                                <option value="mecanica">Mecânica Automotiva</option>
-                                <option value="projetista">Projetista de Móveis</option>
-                                <option value="refrigeracao">Refrigeração e Climatização</option>
-                                <option value="ti">Suporte em T.I</option>
-                                <option value="vendas">Vendas e Atendimento ao Cliente</option>
+                                <option value="eletromecanica-elevadores">Eletromecânica de Elevadores</option>
+                                <option value="gastronomia">Gastronomia</option>
+                                <option value="mecanica-automotiva">Mecânica Automotiva</option>
+                                <option value="projetista-moveis">Projetista de Móveis</option>
+                                <option value="refrigeracao-climatizacao">Refrigeração e Climatização</option>
+                                <option value="suporte-ti">Suporte em T.I</option>
+                                <option value="vendas-atendimento">Vendas e Atendimento ao Cliente</option>
                             </select>
                         </div>
 
@@ -105,13 +104,16 @@
                         <div class="campo-largo idade">
                             <label for="data-nascimento">Data de Nascimento</label>
                             <input type="date" id="data-nascimento" name="dataNascimento" autocomplete="bday" required>
+
+                            <div id="erro-data-nascimento" class="mensagem-validacao">
+                            </div>
                         </div>
 
                         <div class="campo-curto idade">
                             <label for="idade-calculada">Idade</label>
                             <!-- Preenchido via JS a partir de data-nascimento. readonly = usuário não digita, só visualiza. -->
                             <input type="text" id="idade-calculada" name="idadeCalculada" readonly placeholder="--" aria-describedby="idade-hint">
-                            <small id="idade-hint" class="campo-ajuda idade">Calculada automaticamente</small>
+                            <P id="idade-hint" class="campo-ajuda idade">Calculada automaticamente</P>
                         </div>
                     </div>
 
@@ -168,7 +170,7 @@
                     </div>
 
                     <label for="onibus">Qual ônibus você utiliza para chegar até a Fundação?</label>
-                    <small class="campo-ajuda">Local de curso: Rua República, 801 - Cidade Baixa, Porto Alegre</small>
+                    <P class="campo-ajuda">Local de curso: Rua República, 801 - Cidade Baixa, Porto Alegre</P>
                     <input type="text" id="onibus" name="onibus" placeholder="Ex: 265, T4, a pé..." required>
                 </fieldset>
 
@@ -179,6 +181,7 @@
                     <label for="escolaridade">Escolaridade</label>
                     <select id="escolaridade" name="escolaridade" required>
                         <option value="">Selecione</option>
+                        <option value="fund-7">7° ano Ensino Fundamental</option>
                         <option value="fund-8">8° ano Ensino Fundamental</option>
                         <option value="fund-9">9° ano Ensino Fundamental</option>
                         <option value="medio-1">1° ano Ensino Médio</option>
@@ -189,6 +192,31 @@
                         <option value="superior-cursando">Ensino Superior - Cursando</option>
                     </select>
 
+                    <div
+                        id="erro-escolaridade"
+                        class="mensagem-validacao">
+                    </div>
+
+                     <!-- Condicional: só faz sentido perguntar frequência pra quem estuda -->
+                    <div class="campo-condicional oculto" id="container-frequencia" data-condicional-de="turno-escola" data-esconder-quando="nao-estudo">
+                        <label for="frequencia-escolar">Qual a porcentagem da sua frequência escolar?</label>
+                        
+                        <P class="campo-ajuda">Só são aceitos jovens com frequência acima de 75%</P>
+
+                        <input type="number"
+                        id="frequencia-escolar" 
+                        name="frequenciaEscolar" 
+                        min="0" max="100" step="1" 
+                        placeholder="Ex: 85" 
+                        oninput="if(this.value.length > 3) this.value = this.value.slice(0, 3);"
+                        >
+                        
+                        <div
+                            id="erro-frequencia-escolar"
+                            class="mensagem-validacao"
+                        ></div>
+                    </div>
+
                     <label for="turno-escola">Qual turno você vai para a escola?</label>
                     <select id="turno-escola" name="turnoEscola" required>
                         <option value="">Selecione</option>
@@ -198,12 +226,7 @@
                         <option value="nao-estudo">Não estudo</option>
                     </select>
 
-                    <!-- Condicional: só faz sentido perguntar frequência pra quem estuda -->
-                    <div class="campo-condicional" data-condicional-de="turno-escola" data-esconder-quando="nao-estudo">
-                        <label for="frequencia-escolar">Qual a porcentagem da sua frequência escolar?</label>
-                        <small class="campo-ajuda">Só são aceitos jovens com frequência acima de 75%</small>
-                        <input type="number" id="frequencia-escolar" name="frequenciaEscolar" min="0" max="100" step="1" placeholder="Ex: 85">
-                    </div>
+                   
                 </fieldset>
 
                 <!-- ================= 5. SITUAÇÃO SOCIOECONÔMICA E FAMILIAR ================= -->

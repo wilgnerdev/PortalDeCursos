@@ -75,6 +75,22 @@
     width: 200px;
 }
 
+.mensagem-validacao {
+    display: none;
+    margin-top: 8px;
+    color: var(--alerta);
+    font-weight: 600;
+}
+
+.campo-ajuda {
+    font-weight: 600;
+    color: #000;
+    font-size: 15px;
+    font-family: var(--fonte-destaque);
+    padding: 8px 0;
+}
+
+
 select, select, textarea {
     padding: 15px;
     border-radius: 8px;
@@ -89,6 +105,10 @@ select:focus, select:focus, textarea:focus {
     outline: none;
     border-color: var(--azul-claro);
 } 
+
+.oculto {
+    display: none;
+}
 
 textarea {
     max-width: 100%;
