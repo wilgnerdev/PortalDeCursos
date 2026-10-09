@@ -16,17 +16,21 @@
     margin-bottom: 30px;
 }
 
-.btn-voltar {
+.btn.voltar {
     margin: 0 auto;
-    border-radius: 5px;
+    border-radius: 30px;
     cursor: pointer;
     display: block;
     justify-content: center;
     align-items: center;
+    background-color: var(--cor-azul-escuro);
+}
+
+.btn.voltar:hover {
     background-color: var(--azul-pao);
 }
 
-.btn-voltar a {
+.btn.voltar a {
     text-decoration: none;
     color: #fff;
 }

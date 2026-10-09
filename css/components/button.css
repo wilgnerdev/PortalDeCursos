@@ -12,7 +12,7 @@
 }
 
 .btn:hover {
-    background-color: var(--verde-agua-hub);
+    background-color: var(--cor-laranja-hover);
 }
 
 .ver-detalhes {
