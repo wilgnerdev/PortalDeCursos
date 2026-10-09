@@ -2,7 +2,7 @@ class SiteHeader extends HTMLElement {
     connectedCallback() {
         this.innerHTML =
             `
-        <header>
+        <header id="header">
             <div class="nav-social">
                 <nav>
                     <a href="https://www.facebook.com/paodospobres" target="_blank" aria-label="Facebook"><i
