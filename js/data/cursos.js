@@ -7,6 +7,10 @@
 // Nota geral válida para TODOS os cursos (não duplicar por curso)
 export const notaPcD = "Pessoas com deficiência são bem-vindas e não há limite de idade.";
 
+export const regrasInscricao = {
+    pcdSemLimiteIdade: true
+};
+
 export const cursos = [
   {
     id: "suporte-ti",
@@ -27,6 +31,11 @@ export const cursos = [
       idade: "14 a 22 anos",
       escolaridadeMinima: "8º ano do Ensino Fundamental",
       exigeVulnerabilidadeSocial: false
+    },
+    requisitos: {
+    idadeMinima: 14,
+    idadeMaxima: 22,
+    escolaridadeMinima: "fund-8"
     },
     turnos: [
       { turno: "Manhã", observacao: "Início imediato" },
@@ -53,6 +62,11 @@ export const cursos = [
       escolaridadeMinima: "8º ano do Ensino Fundamental",
       exigeVulnerabilidadeSocial: false
     },
+    requisitos: {
+    idadeMinima: 18,
+    idadeMaxima: 22,
+    escolaridadeMinima: "fund-8"
+    },
     turnos: [
       { turno: "Manhã", observacao: "" },
       { turno: "Tarde", observacao: "" }
@@ -77,6 +91,11 @@ export const cursos = [
       idade: "15 a 22 anos",
       escolaridadeMinima: "7º ano do Ensino Fundamental",
       exigeVulnerabilidadeSocial: true
+    },
+    requisitos: {
+    idadeMinima: 15,
+    idadeMaxima: 22,
+    escolaridadeMinima: "fund-7"
     },
     turnos: [
       { turno: "Manhã", observacao: "" },
@@ -103,6 +122,11 @@ export const cursos = [
       escolaridadeMinima: "1º ano do Ensino Médio",
       exigeVulnerabilidadeSocial: true
     },
+    requisitos: {
+    idadeMinima: 16,
+    idadeMaxima: 22,
+    escolaridadeMinima: "medio-1"
+    },
     turnos: [
       { turno: "Manhã", observacao: "" },
       { turno: "Tarde", observacao: "" }
@@ -128,6 +152,11 @@ export const cursos = [
       escolaridadeMinima: "2º ano do Ensino Médio",
       exigeVulnerabilidadeSocial: true
     },
+    requisitos: {
+    idadeMinima: 17,
+    idadeMaxima: 22,
+    escolaridadeMinima: "medio-2"
+    },
     turnos: [
       { turno: "Tarde", observacao: "" }
     ]
@@ -151,6 +180,11 @@ export const cursos = [
       idade: "17 a 22 anos",
       escolaridadeMinima: "8º ano do Ensino Fundamental",
       exigeVulnerabilidadeSocial: true
+    },
+    requisitos: {
+    idadeMinima: 17,
+    idadeMaxima: 22,
+    escolaridadeMinima: "fund-8"
     },
     turnos: [
       { turno: "Manhã", observacao: "" },
@@ -177,6 +211,11 @@ export const cursos = [
       escolaridadeMinima: "8º ano do Ensino Fundamental",
       exigeVulnerabilidadeSocial: true
     },
+    requisitos: {
+    idadeMinima: 15,
+    idadeMaxima: 22,
+    escolaridadeMinima: "fund-8"
+    },
     turnos: [
       { turno: "Manhã", observacao: "" },
       { turno: "Tarde", observacao: "" }
@@ -200,6 +239,11 @@ export const cursos = [
       idade: "14 a 22 anos",
       escolaridadeMinima: "7º ano do Ensino Fundamental",
       exigeVulnerabilidadeSocial: true
+    },
+    requisitos: {
+    idadeMinima: 14,
+    idadeMaxima: 22,
+    escolaridadeMinima: "fund-7"
     },
     turnos: [
       { turno: "Manhã", observacao: "" },
@@ -225,6 +269,11 @@ export const cursos = [
       escolaridadeMinima: "8º ano do Ensino Fundamental",
       exigeVulnerabilidadeSocial: true
     },
+    requisitos: {
+    idadeMinima: 18,
+    idadeMaxima: 22,
+    escolaridadeMinima: "fund-8"
+    },
     turnos: [
       { turno: "Manhã", observacao: "" },
       { turno: "Tarde", observacao: "" }
@@ -248,6 +297,11 @@ export const cursos = [
       idade: "18 a 22 anos",
       escolaridadeMinima: "2º ano do Ensino Médio",
       exigeVulnerabilidadeSocial: true
+    },
+    requisitos: {
+    idadeMinima: 18,
+    idadeMaxima: 22,
+    escolaridadeMinima: "medio-2"
     },
     turnos: [
       { turno: "Manhã", observacao: "" },
@@ -273,6 +327,11 @@ export const cursos = [
       idade: "14 a 22 anos",
       escolaridadeMinima: "8º ano do Ensino Fundamental",
       exigeVulnerabilidadeSocial: true
+    },
+    requisitos: {
+    idadeMinima: 14,
+    idadeMaxima: 22,
+    escolaridadeMinima: "fund-8"
     },
     turnos: [
       { turno: "Manhã", observacao: "" },
@@ -300,11 +359,28 @@ export const cursos = [
       escolaridadeMinima: "2º ano do Ensino Médio",
       exigeVulnerabilidadeSocial: true
     },
+    requisitos: {
+    idadeMinima: 17,
+    idadeMaxima: 22,
+    escolaridadeMinima: "medio-2"
+    },
     turnos: [
       { turno: "Tarde", observacao: "" }
     ]
   }
 ];
+
+export const escolaridades = {
+    "fund-7": 1,
+    "fund-8": 2,
+    "fund-9": 3,
+    "medio-1": 4,
+    "medio-2": 5,
+    "medio-3": 6,
+    "medio-completo": 7,
+    "nao-estudando": 8,
+    "superior-cursando": 9
+};
 
 // Helper de busca — usado pelo template dinâmico via ?curso=<id> na URL
 export function getCursoPorId(id) {

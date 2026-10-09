@@ -21,10 +21,8 @@
         rel="stylesheet">
 
     <!-- Ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />    
 
     <!-- JS -->
     <script type="module" src="/js/components/site-header.js"></script>
@@ -33,16 +31,292 @@
     <script type="module" src="/js/pages/cadastro.js"></script>
     <script type="module" src="/js/pages/formulario-interacao.js"></script>
 
+    <script type="module" src="/js/components/site-header.js"></script>
+    <script type="module" src="/js/components/site-form.js"></script>
     <script type="module" src="/js/components/site-voltar.js"></script>
     <script type="module" src="/js/components/site-footer.js"></script>
 
     <script type="module" src="/js/components/site-modal.js"></script>
+
+
 </head>
 
 <body>
     <site-header></site-header>
     <main>
-        <site-form></site-form>
+        <section class="formulario" id="inscreva-se">
+            <form id="formCadastro" class="corpo-formulario">
+                <h2 class="titulo__form">Faça sua inscrição</h2>
+                <p class="form__paragrafo">Preencha os campos abaixo para se inscrever em nossos cursos</p>
+
+                <!-- ================= 1. CURSO DE INTERESSE ================= -->
+                <fieldset class="fieldset__formulario">
+                    <legend>Curso de Interesse</legend>
+                    <div class="linha">
+                        <div class="campo-largo">
+                            <label for="select-cursos">Selecione um curso</label>
+                            <select id="select-cursos" name="curso" required>
+                                <option value="">Selecione um curso</option>
+                                <option value="assistente-administrativo">Assistente Administrativo</option>
+                                <option value="cabeleireiro">Assistente de Cabeleireiro</option>
+                                <option value="desenvolvimento-web">Desenvolvimento Web</option>
+                                <option value="corte-costura-modelagem">Corte, Costura e Modelagem Sustentável</option>
+                                <option value="desporto">Desporto</option>
+                                <option value="eletromecanica-elevadores">Eletromecânica de Elevadores</option>
+                                <option value="gastronomia">Gastronomia</option>
+                                <option value="mecanica-automotiva">Mecânica Automotiva</option>
+                                <option value="projetista-moveis">Projetista de Móveis</option>
+                                <option value="refrigeracao-climatizacao">Refrigeração e Climatização</option>
+                                <option value="suporte-ti">Suporte em T.I</option>
+                                <option value="vendas-atendimento">Vendas e Atendimento ao Cliente</option>
+                            </select>
+
+                            <div id="erro-select-cursos" class="mensagem-validacao"></div>
+                        </div>
+
+                        <div class="campo-curto periodo">
+                            <label for="select-periodo">Período de Preferência</label>
+                            <select id="select-periodo" name="periodo" required>
+                                <option value="">Selecione</option>
+                                <option value="manha">Manhã</option>
+                                <option value="tarde">Tarde</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- ================= 2. DADOS PESSOAIS ================= -->
+                <fieldset class="fieldset__formulario">
+                    <legend>Dados Pessoais</legend>
+
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" autocomplete="name" placeholder="Digite seu nome completo" required>
+
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" autocomplete="email" placeholder="seu@email.com" required>
+
+                    <label for="cpf">CPF</label>
+                    <input type="text" id="cpf" name="cpf" inputmode="numeric" placeholder="000.000.000-00" maxlength="14" required>
+
+                    <div class="linha">
+                        <div class="campo-largo">
+                            <label for="telefone">Telefone (com WhatsApp)</label>
+                            <input type="tel" id="telefone" name="telefone" autocomplete="tel" placeholder="(51) 99999-9999" required>
+                        </div>
+
+                        <div class="campo-largo">
+                            <label for="telefone-secundario">Telefone Secundário <span class="opcional">(opcional)</span></label>
+                            <input type="tel" id="telefone-secundario" name="telefoneSecundario" placeholder="(51) 99999-9999">
+                        </div>
+                    </div>
+
+                    <div class="linha idade">
+                        <div class="campo-largo idade">
+                            <label for="data-nascimento">Data de Nascimento</label>
+                            <input type="date" id="data-nascimento" name="dataNascimento" autocomplete="bday" required>
+
+                            <div id="erro-data-nascimento" class="mensagem-validacao">
+                            </div>
+                        </div>
+
+                        <div class="campo-curto idade">
+                            <label for="idade-calculada">Idade</label>
+                            <!-- Preenchido via JS a partir de data-nascimento. readonly = usuário não digita, só visualiza. -->
+                            <input type="text" id="idade-calculada" name="idadeCalculada" readonly placeholder="--" aria-describedby="idade-hint">
+                            <P id="idade-hint" class="campo-ajuda idade">Calculada automaticamente</P>
+                        </div>
+                    </div>
+
+                    <label for="genero">Gênero / Como você se identifica</label>
+                    <select class="genero" id="genero" name="genero" required>
+                        <option value="">Selecione</option>
+                        <option value="feminino">Feminino</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="nao-binario">Não-binário</option>
+                        <option value="prefiro-nao-informar">Prefiro não informar</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                    <!-- Campo condicional: só aparece se genero = "outro". Escondido por padrão, JS remove .oculto -->
+                    <!-- <div class="campo-condicional oculto" data-condicional-de="genero" data-mostrar-quando="outro">
+                        <label for="genero-outro">Se preferir, especifique</label>
+                        <input type="text" id="genero-outro" name="generoOutro">
+                    </div> -->
+                </fieldset>
+
+                <!-- ================= 3. ENDEREÇO ================= -->
+                <fieldset class="fieldset__formulario">
+                    <legend>Endereço</legend>
+
+                    <label for="cep">CEP</label>
+                    <input type="text" id="cep" name="cep" inputmode="numeric" autocomplete="postal-code" placeholder="00000-000" maxlength="9" required>
+
+                    <div class="linha">
+                        <div class="campo-largo">
+                            <label for="logradouro">Rua</label>
+                            <!-- readonly: preenchido pela ViaCEP, usuário não digita -->
+                            <input type="text" id="logradouro" name="logradouro" readonly>
+                        </div>
+
+                        <div class="campo-curto">
+                            <label for="numero">Número</label>
+                            <!-- ViaCEP não retorna número da casa, então esse continua editável -->
+                            <input type="text" id="numero" name="numero" inputmode="numeric" required>
+                        </div>
+                    </div>
+
+                    <label for="bairro">Bairro</label>
+                    <input type="text" id="bairro" name="bairro" readonly>
+
+                    <div class="linha">
+                        <div class="campo-largo">
+                            <label for="cidade">Cidade</label>
+                            <input type="text" id="cidade" name="cidade" readonly>
+                        </div>
+
+                        <div class="campo-curto">
+                            <label for="uf">UF</label>
+                            <input type="text" id="uf" name="uf" maxlength="2" readonly>
+                        </div>
+                    </div>
+
+                    <label for="onibus">Qual ônibus você utiliza para chegar até a Fundação?</label>
+                    <P class="campo-ajuda">Local de curso: Rua República, 801 - Cidade Baixa, Porto Alegre</P>
+                    <input type="text" id="onibus" name="onibus" placeholder="Ex: 265, T4, a pé..." required>
+                </fieldset>
+
+                <!-- ================= 4. SITUAÇÃO ESCOLAR ================= -->
+                <fieldset class="fieldset__formulario">
+                    <legend>Situação Escolar</legend>
+
+                    <label for="escolaridade">Escolaridade</label>
+                    <select id="escolaridade" name="escolaridade" required>
+                        <option value="">Selecione</option>
+                        <option value="fund-7">7° ano Ensino Fundamental</option>
+                        <option value="fund-8">8° ano Ensino Fundamental</option>
+                        <option value="fund-9">9° ano Ensino Fundamental</option>
+                        <option value="medio-1">1° ano Ensino Médio</option>
+                        <option value="medio-2">2° ano Ensino Médio</option>
+                        <option value="medio-3">3° ano Ensino Médio</option>
+                        <option value="medio-completo">Ensino Médio Completo</option>
+                        <option value="nao-estudando">Não estou estudando</option>
+                        <option value="superior-cursando">Ensino Superior - Cursando</option>
+                    </select>
+
+                    <div
+                        id="erro-escolaridade"
+                        class="mensagem-validacao">
+                    </div>
+
+                     <!-- Condicional: só faz sentido perguntar frequência pra quem estuda -->
+                    <div class="campo-condicional oculto" id="container-frequencia" data-condicional-de="turno-escola" data-esconder-quando="nao-estudo">
+                        <label for="frequencia-escolar">Qual a porcentagem da sua frequência escolar?</label>
+                        
+                        <P class="campo-ajuda">Só são aceitos jovens com frequência acima de 75%</P>
+
+                        <input type="number"
+                        id="frequencia-escolar" 
+                        name="frequenciaEscolar" 
+                        min="0" max="100" step="1" 
+                        placeholder="Ex: 85" 
+                        oninput="if(this.value.length > 3) this.value = this.value.slice(0, 3);"
+                        >
+                        
+                        <div
+                            id="erro-frequencia-escolar"
+                            class="mensagem-validacao"
+                        ></div>
+                    </div>
+
+                    <label for="turno-escola">Qual turno você vai para a escola?</label>
+                    <select id="turno-escola" name="turnoEscola" required>
+                        <option value="">Selecione</option>
+                        <option value="manha">Manhã</option>
+                        <option value="tarde">Tarde</option>
+                        <option value="noite">Noite</option>
+                        <option value="nao-estudo">Não estudo</option>
+                    </select>
+
+                   
+                </fieldset>
+
+                <!-- ================= 5. SITUAÇÃO SOCIOECONÔMICA E FAMILIAR ================= -->
+                <fieldset class="fieldset__formulario">
+                    <legend>Situação Socioeconômica e Familiar</legend>
+
+                    <label for="pessoas-casa">Quem são as pessoas que moram com você, na mesma casa?</label>
+                    <textarea id="pessoas-casa" name="pessoasCasa" rows="3" required></textarea>
+
+                    <label for="renda-familiar">Somando o salário de todos que moram na sua casa, qual o valor total da renda mensal?</label>
+                    <select id="renda-familiar" name="rendaFamiliar" required>
+                        <option value="">Selecione</option>
+                        <option value="0-500">R$0,00 até R$500,00</option>
+                        <option value="501-1000">R$501,00 até R$1000,00</option>
+                        <option value="1001-1500">R$1001,00 até R$1500,00</option>
+                        <option value="1501-2000">R$1501,00 até R$2000,00</option>
+                        <option value="2001-2500">R$2001,00 até R$2500,00</option>
+                        <option value="2501-3000">R$2501,00 até R$3000,00</option>
+                        <option value="3001+">Mais de R$3001,00</option>
+                    </select>
+
+                        <label>Reside em Acolhimento Institucional?</label>
+                        <div class="grupo-radio">
+                            <label><input type="radio" name="acolhimento" value="sim" required> Sim</label>
+                            <label><input type="radio" name="acolhimento" value="nao"> Não</label>
+                        </div>
+                        <!-- Condicional: só aparece se acolhimento = sim -->
+                        <div class="campo-condicional oculto" data-condicional-de="acolhimento" data-mostrar-quando="sim">
+                            <label for="acolhimento-qual">Qual?</label>
+                            <input type="text" id="acolhimento-qual" name="acolhimentoQual">
+                        </div>
+                    
+                        <label>Você possui alguma deficiência?</label>
+                        <div class="grupo-radio">
+                            <label><input type="radio" name="deficiencia" value="sim" required> Sim</label>
+                            <label><input type="radio" name="deficiencia" value="nao"> Não</label>
+                        </div>
+                        <!-- Condicional: só aparece se deficiencia = sim -->
+                        <div class="campo-condicional oculto" data-condicional-de="deficiencia" data-mostrar-quando="sim">
+                            <label for="deficiencia-qual">Qual?</label>
+                            <input type="text" id="deficiencia-qual" name="deficienciaQual">
+                        </div>
+                    
+                        <label>Já fez algum curso na Fundação Pão dos Pobres?</label>
+                        <div class="grupo-radio">
+                            <label><input type="radio" name="jaFezCurso" value="sim" required> Sim</label>
+                            <label><input type="radio" name="jaFezCurso" value="nao"> Não</label>
+                        </div>
+                    
+                </fieldset>
+
+                <!-- ================= 6. SOBRE VOCÊ ================= -->
+                <fieldset class="fieldset__formulario">
+                    <legend>Sobre Você</legend>
+
+                    <label for="expectativa">Qual a sua expectativa em relação ao curso escolhido?</label>
+                    <textarea id="expectativa" name="expectativa" rows="4" required></textarea>
+
+                    <label for="historia-vida">Para que possamos te conhecer, conte sua história de vida</label>
+                    <textarea id="historia-vida" name="historiaVida" rows="6" required></textarea>
+
+                    <label for="porque-escolher">Dentre tantos jovens interessados nos cursos, por que devemos escolher você para receber uma das vagas?</label>
+                    <textarea id="porque-escolher" name="porqueEscolher" rows="4" required></textarea>
+                </fieldset>
+
+                <!-- ================= 7. CONSENTIMENTO (LGPD) ================= -->
+                <fieldset class="fieldset__formulario">
+                    <legend>Consentimento</legend>
+                    <div class="linha-checkbox">
+                       <label class="consentimento" for="consentimento-lgpd">
+                        <input type="checkbox" id="consentimento-lgpd" name="consentimentoLgpd" required>
+                        <span>Autorizo o uso dos meus dados pessoais para fins de análise e seleção no processo
+                        seletivo da Fundação O Pão dos Pobres, conforme a Lei Geral de Proteção de Dados (LGPD).</span>
+                       </label>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="btn">Enviar inscrição</button>
+            </form>
+        </section>
         <site-voltar></site-voltar>
     </main>
     <site-footer></site-footer>
