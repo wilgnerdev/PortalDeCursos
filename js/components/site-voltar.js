@@ -5,7 +5,7 @@ class SiteVoltar extends HTMLElement {
         <section class="voltar">
             <div class="voltar-body">
                 <h3 class="voltar-titulo">Quer explorar mais cursos?</h3>
-                <p class="btn btn-voltar"><a href="/index.html#cursos">Volte ao Ínicio</a></p>
+                <p class="btn voltar"><a href="/index.html#cursos">Volte ao Ínicio</a></p>
             </div>
         </section>
         `
