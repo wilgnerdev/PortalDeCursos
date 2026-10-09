@@ -220,7 +220,7 @@ body {
     padding-left: 2px;
 }
 
-.btn-sidebar {
+.btn.sidebar {
     display: block;
     margin-top: auto;
     text-align: center;
@@ -235,8 +235,8 @@ body {
     transition: 0.5s;
 }
 
-.btn-sidebar:hover {
-    background-color: var(--verde-agua-hub);
+.btn.sidebar:hover {
+    background-color: var(--cor-laranja-hover);
 }
 
 .cta-sub {
